@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropTech Ecosystem Visualization</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        #container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        #graph {
+            width: 100%;
+            height: 100%;
+        }
+
+        .controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(20, 20, 20, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            max-width: 300px;
+        }
+
+        .controls h1 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #4fc3f7;
+        }
+
+        .controls p {
+            font-size: 12px;
+            line-height: 1.5;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .control-group {
+            margin-bottom: 15px;
+        }
+
+        .control-group label {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+
+        .control-group input[type="range"] {
+            width: 100%;
+        }
+
+        .control-group select {
+            width: 100%;
+            padding: 8px;
+            background: #1a1a1a;
+            color: #fff;
+            border: 1px solid #333;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(20, 20, 20, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .legend h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #4fc3f7;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 11px;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .legend-item:hover {
+            opacity: 1;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
+            margin-right: 8px;
+        }
+
+        .stats {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(20, 20, 20, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            font-size: 12px;
+        }
+
+        .stats h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #4fc3f7;
+        }
+
+        .stat-item {
+            margin-bottom: 5px;
+            color: #aaa;
+        }
+
+        .stat-value {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: rgba(20, 20, 20, 0.95);
+            padding: 12px;
+            border-radius: 8px;
+            pointer-events: none;
+            font-size: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            display: none;
+            max-width: 300px;
+            border: 1px solid #333;
+        }
+
+        .tooltip h4 {
+            margin-bottom: 8px;
+            color: #4fc3f7;
+            font-size: 14px;
+        }
+
+        .tooltip p {
+            margin: 4px 0;
+            color: #ccc;
+        }
+
+        .node-label {
+            font-size: 10px;
+            fill: #fff;
+            pointer-events: none;
+            text-anchor: middle;
+            text-shadow: 0 0 3px rgba(0,0,0,0.8);
+        }
+
+        .link {
+            stroke: #444;
+            stroke-opacity: 0.3;
+        }
+
+        .node {
+            cursor: pointer;
+            stroke: #fff;
+            stroke-width: 1.5px;
+        }
+
+        .node:hover {
+            stroke: #4fc3f7;
+            stroke-width: 3px;
+        }
+
+        .node.highlighted {
+            stroke: #ffc107;
+            stroke-width: 3px;
+        }
+
+        button {
+            background: #4fc3f7;
+            color: #000;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #6dd5ff;
+        }
+
+        .legend::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .legend::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+
+        .legend::-webkit-scrollbar-thumb {
+            background: #4fc3f7;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <svg id="graph"></svg>
+        
+        <div class="controls">
+            <h1>🏢 PropTech Ecosystem</h1>
+            <p>Explore the network of companies and their categories. Zoom, pan, and drag nodes to navigate.</p>
+            
+            <div class="control-group">
+                <label>Node Size: <span id="nodeSize">6</span></label>
+                <input type="range" id="nodeSizeSlider" min="3" max="15" value="6" step="1">
+            </div>
+            
+            <div class="control-group">
+                <label>Link Distance: <span id="linkDistance">50</span></label>
+                <input type="range" id="linkDistanceSlider" min="20" max="150" value="50" step="10">
+            </div>
+            
+            <div class="control-group">
+                <label>Filter by Category:</label>
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                </select>
+            </div>
+            
+            <button id="resetZoom">Reset View</button>
+            <button id="resetSimulation">Restart Simulation</button>
+        </div>
+
+        <div class="legend">
+            <h3>Categories</h3>
+            <div id="legendContent"></div>
+        </div>
+
+        <div class="stats">
+            <h3>Statistics</h3>
+            <div class="stat-item">Companies: <span class="stat-value" id="companyCount">0</span></div>
+            <div class="stat-item">Categories: <span class="stat-value" id="categoryCount">0</span></div>
+            <div class="stat-item">Connections: <span class="stat-value" id="connectionCount">0</span></div>
+        </div>
+
+        <div class="tooltip" id="tooltip"></div>
+    </div>
+
+    <script>
+        // Configuration
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        
+        // Create SVG
+        const svg = d3.select("#graph")
+            .attr("width", width)
+            .attr("height", height);
+
+        // Create a group for zoom
+        const g = svg.append("g");
+
+        // Setup zoom behavior
+        const zoom = d3.zoom()
+            .scaleExtent([0.1, 10])
+            .on("zoom", (event) => {
+                g.attr("transform", event.transform);
+            });
+
+        svg.call(zoom);
+
+        // Tooltip
+        const tooltip = d3.select("#tooltip");
+
+        // Color scale for categories
+        const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
+
+        // Data structures
+        let nodes = [];
+        let links = [];
+        let simulation;
+        let link, node, label;
+
+        // Load and process CSV data
+        d3.csv("mapa_construtechs_proptechs - Página1.csv").then(data => {
+            console.log("CSV loaded successfully:", data.length, "rows");
+            console.log("First row sample:", data[0]);
+            processData(data);
+            console.log("Processed nodes:", nodes.length, "links:", links.length);
+            console.log("Company nodes:", nodes.filter(n => n.type === 'company').length);
+            console.log("Category nodes:", nodes.filter(n => n.type === 'category').length);
+            createVisualization();
+            updateStats();
+            createLegend();
+            setupControls();
+        }).catch(error => {
+            console.error("Error loading CSV:", error);
+            alert("Failed to load CSV file. Make sure you're accessing via HTTP server (http://localhost:8000)");
+        });
+
+        function processData(data) {
+            const nodeMap = new Map();
+            const categoryNodes = new Map();
+
+            // Filter out rows with no company name
+            const validData = data.filter(d => d.emresa && d.emresa.trim() !== '');
+
+            // Create nodes for companies and categories
+            validData.forEach((row, index) => {
+                const company = row.emresa.trim();
+                const catPrincipal = row.categoria_principal?.trim();
+                const subcat = row.subcategoria?.trim();
+                const subcat2 = row.subcategoria2?.trim();
+
+                // Add company node
+                if (!nodeMap.has(company)) {
+                    nodeMap.set(company, {
+                        id: company,
+                        type: 'company',
+                        category: catPrincipal || 'Uncategorized',
+                        subcategory: subcat,
+                        subcategory2: subcat2
+                    });
+                }
+
+                // Add category nodes
+                if (catPrincipal && !categoryNodes.has(catPrincipal)) {
+                    categoryNodes.set(catPrincipal, {
+                        id: catPrincipal,
+                        type: 'category',
+                        level: 1
+                    });
+                }
+
+                if (subcat && !categoryNodes.has(subcat)) {
+                    categoryNodes.set(subcat, {
+                        id: subcat,
+                        type: 'subcategory',
+                        level: 2,
+                        parent: catPrincipal
+                    });
+                }
+
+                if (subcat2 && !categoryNodes.has(subcat2)) {
+                    categoryNodes.set(subcat2, {
+                        id: subcat2,
+                        type: 'subcategory2',
+                        level: 3,
+                        parent: subcat
+                    });
+                }
+
+                // Create links
+                if (catPrincipal) {
+                    links.push({
+                        source: company,
+                        target: catPrincipal,
+                        type: 'primary'
+                    });
+                }
+
+                if (subcat) {
+                    links.push({
+                        source: company,
+                        target: subcat,
+                        type: 'secondary'
+                    });
+                    
+                    if (catPrincipal && catPrincipal !== subcat) {
+                        links.push({
+                            source: subcat,
+                            target: catPrincipal,
+                            type: 'hierarchy'
+                        });
+                    }
+                }
+
+                if (subcat2) {
+                    links.push({
+                        source: company,
+                        target: subcat2,
+                        type: 'tertiary'
+                    });
+                    
+                    if (subcat && subcat !== subcat2) {
+                        links.push({
+                            source: subcat2,
+                            target: subcat,
+                            type: 'hierarchy'
+                        });
+                    }
+                }
+            });
+
+            // Combine all nodes
+            nodes = [...nodeMap.values(), ...categoryNodes.values()];
+
+            console.log(`Processed ${nodes.length} nodes and ${links.length} links`);
+        }
+
+        function createVisualization() {
+            // Create force simulation
+            simulation = d3.forceSimulation(nodes)
+                .force("link", d3.forceLink(links).id(d => d.id).distance(50))
+                .force("charge", d3.forceManyBody().strength(-100))
+                .force("center", d3.forceCenter(width / 2, height / 2))
+                .force("collision", d3.forceCollide().radius(10));
+
+            // Create links
+            link = g.append("g")
+                .selectAll("line")
+                .data(links)
+                .join("line")
+                .attr("class", "link")
+                .attr("stroke-width", d => {
+                    if (d.type === 'hierarchy') return 2;
+                    return 1;
+                });
+
+            // Create nodes
+            node = g.append("g")
+                .selectAll("circle")
+                .data(nodes)
+                .join("circle")
+                .attr("class", "node")
+                .attr("r", d => {
+                    if (d.type === 'company') return 6;
+                    if (d.type === 'category') return 12;
+                    if (d.type === 'subcategory') return 10;
+                    return 8;
+                })
+                .attr("fill", d => {
+                    if (d.type === 'company') return colorScale(d.category);
+                    if (d.type === 'category') return '#4fc3f7';
+                    return '#ffc107';
+                })
+                .attr("opacity", d => d.type === 'company' ? 0.8 : 1)
+                .call(drag(simulation))
+                .on("mouseover", showTooltip)
+                .on("mousemove", moveTooltip)
+                .on("mouseout", hideTooltip)
+                .on("click", highlightConnections);
+
+            // Create labels for category nodes
+            label = g.append("g")
+                .selectAll("text")
+                .data(nodes.filter(d => d.type !== 'company'))
+                .join("text")
+                .attr("class", "node-label")
+                .attr("dy", -15)
+                .text(d => d.id)
+                .style("font-size", d => {
+                    if (d.type === 'category') return '14px';
+                    return '11px';
+                })
+                .style("font-weight", d => d.type === 'category' ? 'bold' : 'normal');
+
+            // Update positions on simulation tick
+            simulation.on("tick", () => {
+                link
+                    .attr("x1", d => d.source.x)
+                    .attr("y1", d => d.source.y)
+                    .attr("x2", d => d.target.x)
+                    .attr("y2", d => d.target.y);
+
+                node
+                    .attr("cx", d => d.x)
+                    .attr("cy", d => d.y);
+
+                label
+                    .attr("x", d => d.x)
+                    .attr("y", d => d.y);
+            });
+        }
+
+        function drag(simulation) {
+            function dragstarted(event) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                event.subject.fx = event.subject.x;
+                event.subject.fy = event.subject.y;
+            }
+
+            function dragged(event) {
+                event.subject.fx = event.x;
+                event.subject.fy = event.y;
+            }
+
+            function dragended(event) {
+                if (!event.active) simulation.alphaTarget(0);
+                event.subject.fx = null;
+                event.subject.fy = null;
+            }
+
+            return d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended);
+        }
+
+        function showTooltip(event, d) {
+            let content = `<h4>${d.id}</h4>`;
+            
+            if (d.type === 'company') {
+                content += `<p><strong>Type:</strong> Company</p>`;
+                content += `<p><strong>Category:</strong> ${d.category}</p>`;
+                if (d.subcategory) content += `<p><strong>Subcategory:</strong> ${d.subcategory}</p>`;
+                if (d.subcategory2) content += `<p><strong>Sub-subcategory:</strong> ${d.subcategory2}</p>`;
+            } else {
+                content += `<p><strong>Type:</strong> ${d.type.replace('_', ' ')}</p>`;
+                const connections = links.filter(l => l.source.id === d.id || l.target.id === d.id).length;
+                content += `<p><strong>Connections:</strong> ${connections}</p>`;
+            }
+
+            tooltip.html(content).style("display", "block");
+        }
+
+        function moveTooltip(event) {
+            tooltip
+                .style("left", (event.pageX + 15) + "px")
+                .style("top", (event.pageY + 15) + "px");
+        }
+
+        function hideTooltip() {
+            tooltip.style("display", "none");
+        }
+
+        function highlightConnections(event, d) {
+            // Reset all nodes
+            node.classed("highlighted", false).attr("opacity", 0.2);
+            link.attr("stroke-opacity", 0.1);
+
+            // Highlight selected node and connections
+            const connectedNodeIds = new Set([d.id]);
+            
+            links.forEach(l => {
+                if (l.source.id === d.id || l.target.id === d.id) {
+                    connectedNodeIds.add(l.source.id);
+                    connectedNodeIds.add(l.target.id);
+                }
+            });
+
+            node.filter(n => connectedNodeIds.has(n.id))
+                .classed("highlighted", true)
+                .attr("opacity", 1);
+
+            link.filter(l => l.source.id === d.id || l.target.id === d.id)
+                .attr("stroke-opacity", 0.6);
+
+            // Double-click to reset
+            setTimeout(() => {
+                svg.on("click", () => {
+                    node.classed("highlighted", false).attr("opacity", n => n.type === 'company' ? 0.8 : 1);
+                    link.attr("stroke-opacity", 0.3);
+                    svg.on("click", null);
+                }, { once: true });
+            }, 100);
+        }
+
+        function updateStats() {
+            const companies = nodes.filter(n => n.type === 'company').length;
+            const categories = new Set(nodes.filter(n => n.type === 'category').map(n => n.id)).size;
+            
+            d3.select("#companyCount").text(companies);
+            d3.select("#categoryCount").text(categories);
+            d3.select("#connectionCount").text(links.length);
+        }
+
+        function createLegend() {
+            const categories = Array.from(new Set(nodes.filter(n => n.type === 'company').map(n => n.category))).sort();
+            
+            const categorySelect = d3.select("#categoryFilter");
+            categories.forEach(cat => {
+                categorySelect.append("option").attr("value", cat).text(cat);
+            });
+
+            const legendContent = d3.select("#legendContent");
+            
+            categories.forEach(cat => {
+                const item = legendContent.append("div").attr("class", "legend-item");
+                item.append("div")
+                    .attr("class", "legend-color")
+                    .style("background-color", colorScale(cat));
+                item.append("span").text(cat);
+                
+                item.on("click", () => {
+                    categorySelect.property("value", cat);
+                    filterByCategory(cat);
+                });
+            });
+        }
+
+        function setupControls() {
+            // Node size control
+            d3.select("#nodeSizeSlider").on("input", function() {
+                const size = +this.value;
+                d3.select("#nodeSize").text(size);
+                node.attr("r", d => {
+                    if (d.type === 'company') return size;
+                    if (d.type === 'category') return size * 2;
+                    if (d.type === 'subcategory') return size * 1.5;
+                    return size * 1.2;
+                });
+            });
+
+            // Link distance control
+            d3.select("#linkDistanceSlider").on("input", function() {
+                const distance = +this.value;
+                d3.select("#linkDistance").text(distance);
+                simulation.force("link").distance(distance);
+                simulation.alpha(0.3).restart();
+            });
+
+            // Category filter
+            d3.select("#categoryFilter").on("change", function() {
+                filterByCategory(this.value);
+            });
+
+            // Reset zoom button
+            d3.select("#resetZoom").on("click", () => {
+                svg.transition().duration(750).call(
+                    zoom.transform,
+                    d3.zoomIdentity.translate(0, 0).scale(1)
+                );
+            });
+
+            // Reset simulation button
+            d3.select("#resetSimulation").on("click", () => {
+                simulation.alpha(1).restart();
+            });
+        }
+
+        function filterByCategory(category) {
+            if (category === "all") {
+                node.attr("opacity", d => d.type === 'company' ? 0.8 : 1);
+                link.attr("stroke-opacity", 0.3);
+                label.attr("opacity", 1);
+            } else {
+                node.attr("opacity", d => {
+                    if (d.type === 'company') {
+                        return d.category === category ? 0.8 : 0.1;
+                    }
+                    // Show related category nodes
+                    const isRelated = links.some(l => 
+                        (l.source.id === d.id || l.target.id === d.id) && 
+                        ((l.source.category === category) || (l.target.category === category))
+                    );
+                    return isRelated ? 1 : 0.1;
+                });
+
+                link.attr("stroke-opacity", d => {
+                    const sourceMatch = d.source.type === 'company' && d.source.category === category;
+                    const targetMatch = d.target.type === 'company' && d.target.category === category;
+                    return (sourceMatch || targetMatch) ? 0.3 : 0.05;
+                });
+
+                label.attr("opacity", d => {
+                    const isRelated = links.some(l => 
+                        (l.source.id === d.id || l.target.id === d.id) && 
+                        ((l.source.category === category) || (l.target.category === category))
+                    );
+                    return isRelated ? 1 : 0.1;
+                });
+            }
+        }
+
+        // Handle window resize
+        window.addEventListener("resize", () => {
+            const newWidth = window.innerWidth;
+            const newHeight = window.innerHeight;
+            svg.attr("width", newWidth).attr("height", newHeight);
+            simulation.force("center", d3.forceCenter(newWidth / 2, newHeight / 2));
+            simulation.alpha(0.3).restart();
+        });
+    </script>
+</body>
+</html>
+
