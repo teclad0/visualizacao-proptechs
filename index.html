@@ -25,14 +25,59 @@
             position: relative;
         }
 
-        #graph {
+        .tabs {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(20, 20, 20, 0.9);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            display: flex;
+            gap: 10px;
+        }
+
+        .tab-button {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .tab-button:hover {
+            background: #555;
+        }
+
+        .tab-button.active {
+            background: #4fc3f7;
+            color: #000;
+        }
+
+        .graph-container {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .graph-container.active {
+            display: block;
+        }
+
+        .graph {
             width: 100%;
             height: 100%;
         }
 
         .controls {
             position: absolute;
-            top: 20px;
+            top: 80px;
             left: 20px;
             background: rgba(20, 20, 20, 0.9);
             padding: 20px;
@@ -83,7 +128,7 @@
         .legend {
             position: absolute;
             bottom: 20px;
-            left: 20px;
+            right: 20px;
             background: rgba(20, 20, 20, 0.9);
             padding: 15px;
             border-radius: 10px;
@@ -91,6 +136,12 @@
             z-index: 1000;
             max-height: 400px;
             overflow-y: auto;
+            max-width: 250px;
+        }
+
+        #legend-mapa {
+            left: 20px;
+            right: auto;
         }
 
         .legend h3 {
@@ -158,7 +209,9 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             z-index: 2000;
             display: none;
-            max-width: 300px;
+            max-width: 400px;
+            max-height: 80vh;
+            overflow-y: auto;
             border: 1px solid #333;
         }
 
@@ -231,129 +284,201 @@
             background: #4fc3f7;
             border-radius: 3px;
         }
+
+        .tooltip::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .tooltip::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+
+        .tooltip::-webkit-scrollbar-thumb {
+            background: #4fc3f7;
+            border-radius: 3px;
+        }
     </style>
 </head>
 <body>
     <div id="container">
-        <svg id="graph"></svg>
-        
-        <div class="controls">
-            <h1>🏢 PropTech Ecosystem</h1>
-            <p>Explore the network of companies and their categories. Zoom, pan, and drag nodes to navigate.</p>
-            
-            <div class="control-group">
-                <label>Node Size: <span id="nodeSize">6</span></label>
-                <input type="range" id="nodeSizeSlider" min="3" max="15" value="6" step="1">
-            </div>
-            
-            <div class="control-group">
-                <label>Link Distance: <span id="linkDistance">50</span></label>
-                <input type="range" id="linkDistanceSlider" min="20" max="150" value="50" step="10">
-            </div>
-            
-            <div class="control-group">
-                <label>Filter by Category:</label>
-                <select id="categoryFilter">
-                    <option value="all">All Categories</option>
-                </select>
-            </div>
-            
-            <button id="resetZoom">Reset View</button>
-            <button id="resetSimulation">Restart Simulation</button>
+        <div class="tabs">
+            <button class="tab-button active" data-tab="mapa">Mapa PropTechs</button>
+            <button class="tab-button" data-tab="classificacao">Classificação Matriz</button>
         </div>
 
-        <div class="legend">
-            <h3>Categories</h3>
-            <div id="legendContent"></div>
+        <!-- Mapa PropTechs Graph -->
+        <div id="mapa-container" class="graph-container active">
+            <svg id="graph-mapa" class="graph"></svg>
+            
+            <div class="controls" id="controls-mapa">
+                <h1>🏢 PropTech Ecosystem</h1>
+                <p>Explore the network of companies and their categories. Zoom, pan, and drag nodes to navigate.</p>
+                
+                <div class="control-group">
+                    <label>Node Size: <span id="nodeSize-mapa">6</span></label>
+                    <input type="range" id="nodeSizeSlider-mapa" min="3" max="15" value="6" step="1">
+                </div>
+                
+                <div class="control-group">
+                    <label>Link Distance: <span id="linkDistance-mapa">50</span></label>
+                    <input type="range" id="linkDistanceSlider-mapa" min="20" max="150" value="50" step="10">
+                </div>
+                
+                <div class="control-group">
+                    <label>Filter by Category:</label>
+                    <select id="categoryFilter-mapa">
+                        <option value="all">All Categories</option>
+                    </select>
+                </div>
+                
+                <button id="resetZoom-mapa">Reset View</button>
+                <button id="resetSimulation-mapa">Restart Simulation</button>
+            </div>
+
+            <div class="legend" id="legend-mapa">
+                <h3>Categories</h3>
+                <div id="legendContent-mapa"></div>
+            </div>
+
+            <div class="stats" id="stats-mapa">
+                <h3>Statistics</h3>
+                <div class="stat-item">Companies: <span class="stat-value" id="companyCount-mapa">0</span></div>
+                <div class="stat-item">Categories: <span class="stat-value" id="categoryCount-mapa">0</span></div>
+                <div class="stat-item">Connections: <span class="stat-value" id="connectionCount-mapa">0</span></div>
+            </div>
+
+            <div class="tooltip" id="tooltip-mapa"></div>
         </div>
 
-        <div class="stats">
-            <h3>Statistics</h3>
-            <div class="stat-item">Companies: <span class="stat-value" id="companyCount">0</span></div>
-            <div class="stat-item">Categories: <span class="stat-value" id="categoryCount">0</span></div>
-            <div class="stat-item">Connections: <span class="stat-value" id="connectionCount">0</span></div>
-        </div>
+        <!-- Classificação Matriz Graph -->
+        <div id="classificacao-container" class="graph-container">
+            <svg id="graph-classificacao" class="graph"></svg>
+            
+            <div class="controls" id="controls-classificacao">
+                <h1>📊 Classificação Matriz</h1>
+                <p>Explore companies with their vertical and driver classifications.</p>
+                
+                <div class="control-group">
+                    <label>Node Size: <span id="nodeSize-classificacao">6</span></label>
+                    <input type="range" id="nodeSizeSlider-classificacao" min="3" max="15" value="6" step="1">
+                </div>
+                
+                <div class="control-group">
+                    <label>Link Distance: <span id="linkDistance-classificacao">80</span></label>
+                    <input type="range" id="linkDistanceSlider-classificacao" min="20" max="150" value="80" step="10">
+                </div>
+                
+                <div class="control-group">
+                    <label>Filter by Vertical:</label>
+                    <select id="verticalFilter-classificacao">
+                        <option value="all">All Verticals</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label>Filter by Driver:</label>
+                    <select id="driverFilter-classificacao">
+                        <option value="all">All Drivers</option>
+                    </select>
+                </div>
+                
+                <button id="resetZoom-classificacao">Reset View</button>
+                <button id="resetSimulation-classificacao">Restart Simulation</button>
+            </div>
 
-        <div class="tooltip" id="tooltip"></div>
+            <div class="legend" id="legend-classificacao">
+                <h3>Legend</h3>
+                <div id="legendContent-classificacao"></div>
+            </div>
+
+            <div class="stats" id="stats-classificacao">
+                <h3>Statistics</h3>
+                <div class="stat-item">Companies: <span class="stat-value" id="companyCount-classificacao">0</span></div>
+                <div class="stat-item">Verticals: <span class="stat-value" id="verticalCount-classificacao">0</span></div>
+                <div class="stat-item">Drivers: <span class="stat-value" id="driverCount-classificacao">0</span></div>
+            </div>
+
+            <div class="tooltip" id="tooltip-classificacao"></div>
+        </div>
     </div>
 
     <script>
         // Configuration
         const width = window.innerWidth;
         const height = window.innerHeight;
+
+        // Tab switching functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const tab = button.getAttribute('data-tab');
+                
+                // Update active tab button
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Update active graph container
+                document.querySelectorAll('.graph-container').forEach(container => container.classList.remove('active'));
+                document.getElementById(`${tab}-container`).classList.add('active');
+            });
+        });
+
+        // ============================================================================
+        // MAPA PROPTECHS VISUALIZATION
+        // ============================================================================
         
-        // Create SVG
-        const svg = d3.select("#graph")
+        const svgMapa = d3.select("#graph-mapa")
             .attr("width", width)
             .attr("height", height);
 
-        // Create a group for zoom
-        const g = svg.append("g");
+        const gMapa = svgMapa.append("g");
 
-        // Setup zoom behavior
-        const zoom = d3.zoom()
+        const zoomMapa = d3.zoom()
             .scaleExtent([0.1, 10])
             .on("zoom", (event) => {
-                g.attr("transform", event.transform);
+                gMapa.attr("transform", event.transform);
             });
 
-        svg.call(zoom);
+        svgMapa.call(zoomMapa);
 
-        // Tooltip
-        const tooltip = d3.select("#tooltip");
+        const tooltipMapa = d3.select("#tooltip-mapa");
+        const colorScaleMapa = d3.scaleOrdinal(d3.schemeTableau10);
 
-        // Color scale for categories
-        const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
+        let nodesMapa = [];
+        let linksMapa = [];
+        let simulationMapa;
+        let linkMapa, nodeMapa, labelMapa;
 
-        // Data structures
-        let nodes = [];
-        let links = [];
-        let simulation;
-        let link, node, label;
-
-        // Load and process CSV data
         d3.csv("dados/mapa_construtechs_proptechs - Página1.csv").then(data => {
-            console.log("CSV loaded successfully:", data.length, "rows");
-            console.log("First row sample:", data[0]);
-            processData(data);
-            console.log("Processed nodes:", nodes.length, "links:", links.length);
-            console.log("Company nodes:", nodes.filter(n => n.type === 'company').length);
-            console.log("Category nodes:", nodes.filter(n => n.type === 'category').length);
-            createVisualization();
-            updateStats();
-            createLegend();
-            setupControls();
+            console.log("Mapa CSV loaded successfully:", data.length, "rows");
+            processDataMapa(data);
+            createVisualizationMapa();
+            updateStatsMapa();
+            createLegendMapa();
+            setupControlsMapa();
         }).catch(error => {
-            console.error("Error loading CSV:", error);
-            alert("Failed to load CSV file. Make sure you're accessing via HTTP server (http://localhost:8000)");
+            console.error("Error loading Mapa CSV:", error);
         });
 
-        function processData(data) {
+        function processDataMapa(data) {
             const nodeMap = new Map();
             const categoryNodes = new Map();
 
-            // Filter out rows with no company name
             const validData = data.filter(d => d.emresa && d.emresa.trim() !== '');
 
-            // Create nodes for companies and categories
             validData.forEach((row, index) => {
                 const company = row.emresa.trim();
                 const catPrincipal = row.categoria_principal?.trim();
                 const subcat = row.subcategoria?.trim();
-                const subcat2 = row.subcategoria2?.trim();
 
-                // Add company node
                 if (!nodeMap.has(company)) {
                     nodeMap.set(company, {
                         id: company,
                         type: 'company',
                         category: catPrincipal || 'Uncategorized',
-                        subcategory: subcat,
-                        subcategory2: subcat2
+                        subcategory: subcat
                     });
                 }
 
-                // Add category nodes
                 if (catPrincipal && !categoryNodes.has(catPrincipal)) {
                     categoryNodes.set(catPrincipal, {
                         id: catPrincipal,
@@ -371,18 +496,8 @@
                     });
                 }
 
-                if (subcat2 && !categoryNodes.has(subcat2)) {
-                    categoryNodes.set(subcat2, {
-                        id: subcat2,
-                        type: 'subcategory2',
-                        level: 3,
-                        parent: subcat
-                    });
-                }
-
-                // Create links
                 if (catPrincipal) {
-                    links.push({
+                    linksMapa.push({
                         source: company,
                         target: catPrincipal,
                         type: 'primary'
@@ -390,120 +505,95 @@
                 }
 
                 if (subcat) {
-                    links.push({
+                    linksMapa.push({
                         source: company,
                         target: subcat,
                         type: 'secondary'
                     });
                     
                     if (catPrincipal && catPrincipal !== subcat) {
-                        links.push({
+                        linksMapa.push({
                             source: subcat,
                             target: catPrincipal,
                             type: 'hierarchy'
                         });
                     }
                 }
-
-                if (subcat2) {
-                    links.push({
-                        source: company,
-                        target: subcat2,
-                        type: 'tertiary'
-                    });
-                    
-                    if (subcat && subcat !== subcat2) {
-                        links.push({
-                            source: subcat2,
-                            target: subcat,
-                            type: 'hierarchy'
-                        });
-                    }
-                }
             });
 
-            // Combine all nodes
-            nodes = [...nodeMap.values(), ...categoryNodes.values()];
-
-            console.log(`Processed ${nodes.length} nodes and ${links.length} links`);
+            nodesMapa = [...nodeMap.values(), ...categoryNodes.values()];
+            console.log(`Processed ${nodesMapa.length} nodes and ${linksMapa.length} links`);
         }
 
-        function createVisualization() {
-            // Create force simulation
-            simulation = d3.forceSimulation(nodes)
-                .force("link", d3.forceLink(links).id(d => d.id).distance(50))
+        function createVisualizationMapa() {
+            simulationMapa = d3.forceSimulation(nodesMapa)
+                .force("link", d3.forceLink(linksMapa).id(d => d.id).distance(50))
                 .force("charge", d3.forceManyBody().strength(-100))
                 .force("center", d3.forceCenter(width / 2, height / 2))
                 .force("collision", d3.forceCollide().radius(10));
 
-            // Create links
-            link = g.append("g")
+            linkMapa = gMapa.append("g")
                 .selectAll("line")
-                .data(links)
+                .data(linksMapa)
                 .join("line")
                 .attr("class", "link")
-                .attr("stroke-width", d => {
-                    if (d.type === 'hierarchy') return 2;
-                    return 1;
-                });
+                .attr("stroke-width", d => d.type === 'hierarchy' ? 2 : 1);
 
-            // Create nodes
-            node = g.append("g")
+            nodeMapa = gMapa.append("g")
                 .selectAll("circle")
-                .data(nodes)
+                .data(nodesMapa)
                 .join("circle")
                 .attr("class", "node")
                 .attr("r", d => {
                     if (d.type === 'company') return 6;
                     if (d.type === 'category') return 12;
-                    if (d.type === 'subcategory') return 10;
-                    return 8;
+                    return 10;
                 })
                 .attr("fill", d => {
-                    if (d.type === 'company') return colorScale(d.category);
+                    if (d.type === 'company') return colorScaleMapa(d.category);
                     if (d.type === 'category') return '#4fc3f7';
                     return '#ffc107';
                 })
                 .attr("opacity", d => d.type === 'company' ? 0.8 : 1)
-                .call(drag(simulation))
-                .on("mouseover", showTooltip)
-                .on("mousemove", moveTooltip)
-                .on("mouseout", hideTooltip)
-                .on("click", highlightConnections);
+                .call(dragMapa(simulationMapa))
+                .on("mouseover", (e, d) => showTooltipMapa(e, d))
+                .on("mousemove", moveTooltipMapa)
+                .on("mouseout", hideTooltipMapa)
+                .on("click", (e, d) => highlightConnectionsMapa(e, d));
 
-            // Create labels for category nodes
-            label = g.append("g")
+            // Create labels for ALL nodes
+            labelMapa = gMapa.append("g")
                 .selectAll("text")
-                .data(nodes.filter(d => d.type !== 'company'))
+                .data(nodesMapa)
                 .join("text")
                 .attr("class", "node-label")
                 .attr("dy", -15)
                 .text(d => d.id)
                 .style("font-size", d => {
                     if (d.type === 'category') return '14px';
-                    return '11px';
+                    if (d.type === 'subcategory') return '11px';
+                    return '8px'; // company nodes
                 })
                 .style("font-weight", d => d.type === 'category' ? 'bold' : 'normal');
 
-            // Update positions on simulation tick
-            simulation.on("tick", () => {
-                link
+            simulationMapa.on("tick", () => {
+                linkMapa
                     .attr("x1", d => d.source.x)
                     .attr("y1", d => d.source.y)
                     .attr("x2", d => d.target.x)
                     .attr("y2", d => d.target.y);
 
-                node
+                nodeMapa
                     .attr("cx", d => d.x)
                     .attr("cy", d => d.y);
 
-                label
+                labelMapa
                     .attr("x", d => d.x)
                     .attr("y", d => d.y);
             });
         }
 
-        function drag(simulation) {
+        function dragMapa(simulation) {
             function dragstarted(event) {
                 if (!event.active) simulation.alphaTarget(0.3).restart();
                 event.subject.fx = event.subject.x;
@@ -527,168 +617,672 @@
                 .on("end", dragended);
         }
 
-        function showTooltip(event, d) {
+        function showTooltipMapa(event, d) {
             let content = `<h4>${d.id}</h4>`;
             
             if (d.type === 'company') {
                 content += `<p><strong>Type:</strong> Company</p>`;
                 content += `<p><strong>Category:</strong> ${d.category}</p>`;
                 if (d.subcategory) content += `<p><strong>Subcategory:</strong> ${d.subcategory}</p>`;
-                if (d.subcategory2) content += `<p><strong>Sub-subcategory:</strong> ${d.subcategory2}</p>`;
             } else {
                 content += `<p><strong>Type:</strong> ${d.type.replace('_', ' ')}</p>`;
-                const connections = links.filter(l => l.source.id === d.id || l.target.id === d.id).length;
+                const connections = linksMapa.filter(l => l.source.id === d.id || l.target.id === d.id).length;
                 content += `<p><strong>Connections:</strong> ${connections}</p>`;
             }
 
-            tooltip.html(content).style("display", "block");
+            tooltipMapa.html(content).style("display", "block");
         }
 
-        function moveTooltip(event) {
-            tooltip
+        function moveTooltipMapa(event) {
+            tooltipMapa
                 .style("left", (event.pageX + 15) + "px")
                 .style("top", (event.pageY + 15) + "px");
         }
 
-        function hideTooltip() {
-            tooltip.style("display", "none");
+        function hideTooltipMapa() {
+            tooltipMapa.style("display", "none");
         }
 
-        function highlightConnections(event, d) {
-            // Reset all nodes
-            node.classed("highlighted", false).attr("opacity", 0.2);
-            link.attr("stroke-opacity", 0.1);
+        function highlightConnectionsMapa(event, d) {
+            nodeMapa.classed("highlighted", false).attr("opacity", 0.2);
+            linkMapa.attr("stroke-opacity", 0.1);
 
-            // Highlight selected node and connections
             const connectedNodeIds = new Set([d.id]);
             
-            links.forEach(l => {
+            linksMapa.forEach(l => {
                 if (l.source.id === d.id || l.target.id === d.id) {
                     connectedNodeIds.add(l.source.id);
                     connectedNodeIds.add(l.target.id);
                 }
             });
 
-            node.filter(n => connectedNodeIds.has(n.id))
+            nodeMapa.filter(n => connectedNodeIds.has(n.id))
                 .classed("highlighted", true)
                 .attr("opacity", 1);
 
-            link.filter(l => l.source.id === d.id || l.target.id === d.id)
+            linkMapa.filter(l => l.source.id === d.id || l.target.id === d.id)
                 .attr("stroke-opacity", 0.6);
 
-            // Double-click to reset
             setTimeout(() => {
-                svg.on("click", () => {
-                    node.classed("highlighted", false).attr("opacity", n => n.type === 'company' ? 0.8 : 1);
-                    link.attr("stroke-opacity", 0.3);
-                    svg.on("click", null);
+                svgMapa.on("click", () => {
+                    nodeMapa.classed("highlighted", false).attr("opacity", n => n.type === 'company' ? 0.8 : 1);
+                    linkMapa.attr("stroke-opacity", 0.3);
+                    svgMapa.on("click", null);
                 }, { once: true });
             }, 100);
         }
 
-        function updateStats() {
-            const companies = nodes.filter(n => n.type === 'company').length;
-            const categories = new Set(nodes.filter(n => n.type === 'category').map(n => n.id)).size;
+        function updateStatsMapa() {
+            const companies = nodesMapa.filter(n => n.type === 'company').length;
+            const categories = new Set(nodesMapa.filter(n => n.type === 'category').map(n => n.id)).size;
             
-            d3.select("#companyCount").text(companies);
-            d3.select("#categoryCount").text(categories);
-            d3.select("#connectionCount").text(links.length);
+            d3.select("#companyCount-mapa").text(companies);
+            d3.select("#categoryCount-mapa").text(categories);
+            d3.select("#connectionCount-mapa").text(linksMapa.length);
         }
 
-        function createLegend() {
-            const categories = Array.from(new Set(nodes.filter(n => n.type === 'company').map(n => n.category))).sort();
+        function createLegendMapa() {
+            const categories = Array.from(new Set(nodesMapa.filter(n => n.type === 'company').map(n => n.category))).sort();
             
-            const categorySelect = d3.select("#categoryFilter");
+            const categorySelect = d3.select("#categoryFilter-mapa");
             categories.forEach(cat => {
                 categorySelect.append("option").attr("value", cat).text(cat);
             });
 
-            const legendContent = d3.select("#legendContent");
+            const legendContent = d3.select("#legendContent-mapa");
             
             categories.forEach(cat => {
                 const item = legendContent.append("div").attr("class", "legend-item");
                 item.append("div")
                     .attr("class", "legend-color")
-                    .style("background-color", colorScale(cat));
+                    .style("background-color", colorScaleMapa(cat));
                 item.append("span").text(cat);
                 
                 item.on("click", () => {
                     categorySelect.property("value", cat);
-                    filterByCategory(cat);
+                    filterByCategoryMapa(cat);
                 });
             });
         }
 
-        function setupControls() {
-            // Node size control
-            d3.select("#nodeSizeSlider").on("input", function() {
+        function setupControlsMapa() {
+            d3.select("#nodeSizeSlider-mapa").on("input", function() {
                 const size = +this.value;
-                d3.select("#nodeSize").text(size);
-                node.attr("r", d => {
+                d3.select("#nodeSize-mapa").text(size);
+                nodeMapa.attr("r", d => {
                     if (d.type === 'company') return size;
                     if (d.type === 'category') return size * 2;
-                    if (d.type === 'subcategory') return size * 1.5;
-                    return size * 1.2;
+                    return size * 1.5;
                 });
             });
 
-            // Link distance control
-            d3.select("#linkDistanceSlider").on("input", function() {
+            d3.select("#linkDistanceSlider-mapa").on("input", function() {
                 const distance = +this.value;
-                d3.select("#linkDistance").text(distance);
-                simulation.force("link").distance(distance);
-                simulation.alpha(0.3).restart();
+                d3.select("#linkDistance-mapa").text(distance);
+                simulationMapa.force("link").distance(distance);
+                simulationMapa.alpha(0.3).restart();
             });
 
-            // Category filter
-            d3.select("#categoryFilter").on("change", function() {
-                filterByCategory(this.value);
+            d3.select("#categoryFilter-mapa").on("change", function() {
+                filterByCategoryMapa(this.value);
             });
 
-            // Reset zoom button
-            d3.select("#resetZoom").on("click", () => {
-                svg.transition().duration(750).call(
-                    zoom.transform,
+            d3.select("#resetZoom-mapa").on("click", () => {
+                svgMapa.transition().duration(750).call(
+                    zoomMapa.transform,
                     d3.zoomIdentity.translate(0, 0).scale(1)
                 );
             });
 
-            // Reset simulation button
-            d3.select("#resetSimulation").on("click", () => {
-                simulation.alpha(1).restart();
+            d3.select("#resetSimulation-mapa").on("click", () => {
+                simulationMapa.alpha(1).restart();
             });
         }
 
-        function filterByCategory(category) {
+        function filterByCategoryMapa(category) {
             if (category === "all") {
-                node.attr("opacity", d => d.type === 'company' ? 0.8 : 1);
-                link.attr("stroke-opacity", 0.3);
-                label.attr("opacity", 1);
+                nodeMapa.attr("opacity", d => d.type === 'company' ? 0.8 : 1);
+                linkMapa.attr("stroke-opacity", 0.3);
+                labelMapa.attr("opacity", 1);
             } else {
-                node.attr("opacity", d => {
+                nodeMapa.attr("opacity", d => {
                     if (d.type === 'company') {
                         return d.category === category ? 0.8 : 0.1;
                     }
-                    // Show related category nodes
-                    const isRelated = links.some(l => 
+                    const isRelated = linksMapa.some(l => 
                         (l.source.id === d.id || l.target.id === d.id) && 
                         ((l.source.category === category) || (l.target.category === category))
                     );
                     return isRelated ? 1 : 0.1;
                 });
 
-                link.attr("stroke-opacity", d => {
+                linkMapa.attr("stroke-opacity", d => {
                     const sourceMatch = d.source.type === 'company' && d.source.category === category;
                     const targetMatch = d.target.type === 'company' && d.target.category === category;
                     return (sourceMatch || targetMatch) ? 0.3 : 0.05;
                 });
 
-                label.attr("opacity", d => {
-                    const isRelated = links.some(l => 
+                labelMapa.attr("opacity", d => {
+                    const isRelated = linksMapa.some(l => 
                         (l.source.id === d.id || l.target.id === d.id) && 
                         ((l.source.category === category) || (l.target.category === category))
                     );
                     return isRelated ? 1 : 0.1;
+                });
+            }
+        }
+
+        // ============================================================================
+        // CLASSIFICAÇÃO MATRIZ VISUALIZATION
+        // ============================================================================
+        
+        const svgClassificacao = d3.select("#graph-classificacao")
+            .attr("width", width)
+            .attr("height", height);
+
+        const gClassificacao = svgClassificacao.append("g");
+
+        const zoomClassificacao = d3.zoom()
+            .scaleExtent([0.1, 10])
+            .on("zoom", (event) => {
+                gClassificacao.attr("transform", event.transform);
+            });
+
+        svgClassificacao.call(zoomClassificacao);
+
+        const tooltipClassificacao = d3.select("#tooltip-classificacao");
+
+        let nodesClassificacao = [];
+        let linksClassificacao = [];
+        let simulationClassificacao;
+        let linkClassificacao, nodeClassificacao, labelClassificacao;
+
+        d3.csv("dados/classificacao_proptechs_matriz.csv").then(data => {
+            console.log("Classificacao CSV loaded successfully:", data.length, "rows");
+            processDataClassificacao(data);
+            createVisualizationClassificacao();
+            updateStatsClassificacao();
+            createLegendClassificacao();
+            setupControlsClassificacao();
+        }).catch(error => {
+            console.error("Error loading Classificacao CSV:", error);
+        });
+
+        function processDataClassificacao(data) {
+            const nodeMap = new Map();
+            const verticalNodes = new Map();
+            const driverNodes = new Map();
+
+            // Filter out rows with empty empresa or invalid vertical/driver values
+            const validData = data.filter(d => {
+                const empresa = d.Empresa?.trim();
+                const vertical = d['Vertical sugerido']?.trim();
+                const driver = d['Driver sugerido']?.trim();
+                
+                // Skip if no empresa
+                if (!empresa) return false;
+                
+                // Skip if vertical or driver is empty or contains only "-"
+                if (!vertical || vertical === '-' || !driver || driver === '-') return false;
+                
+                return true;
+            });
+
+            validData.forEach(row => {
+                const empresa = row.Empresa.trim();
+                const vertical = row['Vertical sugerido'].trim();
+                const driver = row['Driver sugerido'].trim();
+                const justificativa = row.Justificativa?.trim() || '';
+
+                // Create or update company node with multiple classifications
+                if (!nodeMap.has(empresa)) {
+                    nodeMap.set(empresa, {
+                        id: empresa,
+                        type: 'company',
+                        classifications: []
+                    });
+                }
+
+                // Add this vertical-driver-justificativa combination
+                nodeMap.get(empresa).classifications.push({
+                    vertical: vertical,
+                    driver: driver,
+                    justificativa: justificativa
+                });
+
+                if (!verticalNodes.has(vertical)) {
+                    verticalNodes.set(vertical, {
+                        id: vertical,
+                        type: 'vertical'
+                    });
+                }
+
+                if (!driverNodes.has(driver)) {
+                    driverNodes.set(driver, {
+                        id: driver,
+                        type: 'driver'
+                    });
+                }
+
+                linksClassificacao.push({
+                    source: empresa,
+                    target: vertical,
+                    type: 'vertical'
+                });
+
+                linksClassificacao.push({
+                    source: empresa,
+                    target: driver,
+                    type: 'driver'
+                });
+            });
+
+            nodesClassificacao = [...nodeMap.values(), ...verticalNodes.values(), ...driverNodes.values()];
+            console.log(`Processed ${nodesClassificacao.length} nodes and ${linksClassificacao.length} links`);
+            console.log(`Filtered companies: ${validData.length} out of ${data.length}`);
+        }
+
+        function createVisualizationClassificacao() {
+            simulationClassificacao = d3.forceSimulation(nodesClassificacao)
+                .force("link", d3.forceLink(linksClassificacao).id(d => d.id).distance(80))
+                .force("charge", d3.forceManyBody().strength(-150))
+                .force("center", d3.forceCenter(width / 2, height / 2))
+                .force("collision", d3.forceCollide().radius(15));
+
+            linkClassificacao = gClassificacao.append("g")
+                .selectAll("line")
+                .data(linksClassificacao)
+                .join("line")
+                .attr("class", "link")
+                .attr("stroke", d => d.type === 'vertical' ? '#7c4dff' : '#ff6b6b')
+                .attr("stroke-width", 2);
+
+            nodeClassificacao = gClassificacao.append("g")
+                .selectAll("circle")
+                .data(nodesClassificacao)
+                .join("circle")
+                .attr("class", "node")
+                .attr("r", d => {
+                    if (d.type === 'company') return 6;
+                    if (d.type === 'vertical') return 14;
+                    return 14;
+                })
+                .attr("fill", d => {
+                    if (d.type === 'company') return '#4fc3f7';
+                    if (d.type === 'vertical') return '#7c4dff';
+                    return '#ff6b6b';
+                })
+                .attr("opacity", 0.9)
+                .call(dragClassificacao(simulationClassificacao))
+                .on("mouseover", (e, d) => showTooltipClassificacao(e, d))
+                .on("mousemove", moveTooltipClassificacao)
+                .on("mouseout", hideTooltipClassificacao)
+                .on("click", (e, d) => highlightConnectionsClassificacao(e, d));
+
+            // Create labels for ALL nodes
+            labelClassificacao = gClassificacao.append("g")
+                .selectAll("text")
+                .data(nodesClassificacao)
+                .join("text")
+                .attr("class", "node-label")
+                .attr("dy", -15)
+                .text(d => d.id)
+                .style("font-size", d => {
+                    if (d.type === 'company') return '8px';
+                    return '12px';
+                })
+                .style("font-weight", d => d.type !== 'company' ? 'bold' : 'normal');
+
+            simulationClassificacao.on("tick", () => {
+                linkClassificacao
+                    .attr("x1", d => d.source.x)
+                    .attr("y1", d => d.source.y)
+                    .attr("x2", d => d.target.x)
+                    .attr("y2", d => d.target.y);
+
+                nodeClassificacao
+                    .attr("cx", d => d.x)
+                    .attr("cy", d => d.y);
+
+                labelClassificacao
+                    .attr("x", d => d.x)
+                    .attr("y", d => d.y);
+            });
+        }
+
+        function dragClassificacao(simulation) {
+            function dragstarted(event) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                event.subject.fx = event.subject.x;
+                event.subject.fy = event.subject.y;
+            }
+
+            function dragged(event) {
+                event.subject.fx = event.x;
+                event.subject.fy = event.y;
+            }
+
+            function dragended(event) {
+                if (!event.active) simulation.alphaTarget(0);
+                event.subject.fx = null;
+                event.subject.fy = null;
+            }
+
+            return d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended);
+        }
+
+        function showTooltipClassificacao(event, d) {
+            let content = `<h4>${d.id}</h4>`;
+            
+            if (d.type === 'company') {
+                content += `<p><strong>Type:</strong> Company</p>`;
+                
+                // Show all classifications for this company
+                if (d.classifications && d.classifications.length > 0) {
+                    content += `<div style="margin-top: 10px; border-top: 1px solid #555; padding-top: 8px;">`;
+                    d.classifications.forEach((classification, index) => {
+                        if (index > 0) {
+                            content += `<div style="margin-top: 8px; border-top: 1px solid #333; padding-top: 8px;">`;
+                        }
+                        content += `<p><strong>Vertical - Driver:</strong> ${classification.vertical} - ${classification.driver}</p>`;
+                        if (classification.justificativa) {
+                            content += `<p style="font-size: 11px; color: #bbb;"><strong>Justificativa:</strong> ${classification.justificativa}</p>`;
+                        }
+                        if (index > 0) {
+                            content += `</div>`;
+                        }
+                    });
+                    content += `</div>`;
+                }
+            } else {
+                content += `<p><strong>Type:</strong> ${d.type === 'vertical' ? 'Vertical' : 'Driver'}</p>`;
+                const connections = linksClassificacao.filter(l => l.source.id === d.id || l.target.id === d.id).length;
+                content += `<p><strong>Connections:</strong> ${connections}</p>`;
+            }
+
+            tooltipClassificacao.html(content).style("display", "block");
+        }
+
+        function moveTooltipClassificacao(event) {
+            tooltipClassificacao
+                .style("left", (event.pageX + 15) + "px")
+                .style("top", (event.pageY + 15) + "px");
+        }
+
+        function hideTooltipClassificacao() {
+            tooltipClassificacao.style("display", "none");
+        }
+
+        function highlightConnectionsClassificacao(event, d) {
+            nodeClassificacao.classed("highlighted", false).attr("opacity", 0.2);
+            linkClassificacao.attr("stroke-opacity", 0.1);
+
+            const connectedNodeIds = new Set([d.id]);
+            
+            linksClassificacao.forEach(l => {
+                if (l.source.id === d.id || l.target.id === d.id) {
+                    connectedNodeIds.add(l.source.id);
+                    connectedNodeIds.add(l.target.id);
+                }
+            });
+
+            nodeClassificacao.filter(n => connectedNodeIds.has(n.id))
+                .classed("highlighted", true)
+                .attr("opacity", 1);
+
+            linkClassificacao.filter(l => l.source.id === d.id || l.target.id === d.id)
+                .attr("stroke-opacity", 0.6);
+
+            setTimeout(() => {
+                svgClassificacao.on("click", () => {
+                    nodeClassificacao.classed("highlighted", false).attr("opacity", 0.9);
+                    linkClassificacao.attr("stroke-opacity", 0.3);
+                    svgClassificacao.on("click", null);
+                }, { once: true });
+            }, 100);
+        }
+
+        function updateStatsClassificacao() {
+            const companies = nodesClassificacao.filter(n => n.type === 'company').length;
+            const verticals = nodesClassificacao.filter(n => n.type === 'vertical').length;
+            const drivers = nodesClassificacao.filter(n => n.type === 'driver').length;
+            
+            d3.select("#companyCount-classificacao").text(companies);
+            d3.select("#verticalCount-classificacao").text(verticals);
+            d3.select("#driverCount-classificacao").text(drivers);
+        }
+
+        function createLegendClassificacao() {
+            const legendContent = d3.select("#legendContent-classificacao");
+            const verticalFilter = d3.select("#verticalFilter-classificacao");
+            const driverFilter = d3.select("#driverFilter-classificacao");
+            
+            // Add legend header items
+            const items = [
+                { color: '#4fc3f7', label: 'Companies' },
+                { color: '#7c4dff', label: 'Verticals' },
+                { color: '#ff6b6b', label: 'Drivers' }
+            ];
+            
+            items.forEach(item => {
+                const div = legendContent.append("div").attr("class", "legend-item");
+                div.append("div")
+                    .attr("class", "legend-color")
+                    .style("background-color", item.color);
+                div.append("span").text(item.label);
+            });
+
+            // Get unique verticals and drivers
+            const verticals = Array.from(new Set(nodesClassificacao.filter(n => n.type === 'vertical').map(n => n.id))).sort();
+            const drivers = Array.from(new Set(nodesClassificacao.filter(n => n.type === 'driver').map(n => n.id))).sort();
+
+            // Populate Vertical dropdown
+            verticals.forEach(v => {
+                verticalFilter.append("option").attr("value", v).text(v);
+            });
+            
+            // Populate Driver dropdown
+            drivers.forEach(d => {
+                driverFilter.append("option").attr("value", d).text(d);
+            });
+
+            // Add separator in legend
+            legendContent.append("div").style("border-top", "1px solid #333").style("margin", "10px 0");
+            legendContent.append("div").style("font-size", "11px").style("color", "#999").text("Click to filter:");
+
+            // Add Verticals to legend as clickable items
+            if (verticals.length > 0) {
+                verticals.forEach(v => {
+                    const item = legendContent.append("div").attr("class", "legend-item");
+                    item.append("div")
+                        .attr("class", "legend-color")
+                        .style("background-color", '#7c4dff');
+                    item.append("span").text(v).style("font-size", "10px");
+                    
+                    item.on("click", () => {
+                        verticalFilter.property("value", v);
+                        applyFiltersClassificacao();
+                    });
+                });
+            }
+            
+            // Add separator
+            legendContent.append("div").style("border-top", "1px solid #333").style("margin", "10px 0");
+            
+            // Add Drivers to legend as clickable items
+            if (drivers.length > 0) {
+                drivers.forEach(d => {
+                    const item = legendContent.append("div").attr("class", "legend-item");
+                    item.append("div")
+                        .attr("class", "legend-color")
+                        .style("background-color", '#ff6b6b');
+                    item.append("span").text(d).style("font-size", "10px");
+                    
+                    item.on("click", () => {
+                        driverFilter.property("value", d);
+                        applyFiltersClassificacao();
+                    });
+                });
+            }
+        }
+
+        function setupControlsClassificacao() {
+            d3.select("#nodeSizeSlider-classificacao").on("input", function() {
+                const size = +this.value;
+                d3.select("#nodeSize-classificacao").text(size);
+                nodeClassificacao.attr("r", d => {
+                    if (d.type === 'company') return size;
+                    return size * 2;
+                });
+            });
+
+            d3.select("#linkDistanceSlider-classificacao").on("input", function() {
+                const distance = +this.value;
+                d3.select("#linkDistance-classificacao").text(distance);
+                simulationClassificacao.force("link").distance(distance);
+                simulationClassificacao.alpha(0.3).restart();
+            });
+
+            d3.select("#verticalFilter-classificacao").on("change", function() {
+                applyFiltersClassificacao();
+            });
+
+            d3.select("#driverFilter-classificacao").on("change", function() {
+                applyFiltersClassificacao();
+            });
+
+            d3.select("#resetZoom-classificacao").on("click", () => {
+                svgClassificacao.transition().duration(750).call(
+                    zoomClassificacao.transform,
+                    d3.zoomIdentity.translate(0, 0).scale(1)
+                );
+            });
+
+            d3.select("#resetSimulation-classificacao").on("click", () => {
+                simulationClassificacao.alpha(1).restart();
+            });
+        }
+
+        function applyFiltersClassificacao() {
+            const selectedVertical = d3.select("#verticalFilter-classificacao").property("value");
+            const selectedDriver = d3.select("#driverFilter-classificacao").property("value");
+
+            if (selectedVertical === "all" && selectedDriver === "all") {
+                // Show all nodes and links
+                nodeClassificacao.attr("opacity", 0.9);
+                linkClassificacao.attr("stroke-opacity", 0.3);
+                labelClassificacao.attr("opacity", 1);
+            } else {
+                // Apply combined filtering
+                nodeClassificacao.attr("opacity", d => {
+                    // Always show selected vertical and driver nodes
+                    if (d.type === 'vertical' && (selectedVertical === "all" || d.id === selectedVertical)) return 1;
+                    if (d.type === 'driver' && (selectedDriver === "all" || d.id === selectedDriver)) return 1;
+                    
+                    // Dim non-selected category nodes
+                    if (d.type === 'vertical' && selectedVertical !== "all" && d.id !== selectedVertical) return 0.1;
+                    if (d.type === 'driver' && selectedDriver !== "all" && d.id !== selectedDriver) return 0.1;
+                    
+                    // For companies, check if they match the filter criteria
+                    if (d.type === 'company') {
+                        let matchesVertical = selectedVertical === "all";
+                        let matchesDriver = selectedDriver === "all";
+                        
+                        if (selectedVertical !== "all") {
+                            matchesVertical = linksClassificacao.some(l => 
+                                l.type === 'vertical' && 
+                                l.source.id === d.id && 
+                                l.target.id === selectedVertical
+                            );
+                        }
+                        
+                        if (selectedDriver !== "all") {
+                            matchesDriver = linksClassificacao.some(l => 
+                                l.type === 'driver' && 
+                                l.source.id === d.id && 
+                                l.target.id === selectedDriver
+                            );
+                        }
+                        
+                        // Show company only if it matches both criteria
+                        return (matchesVertical && matchesDriver) ? 0.9 : 0.1;
+                    }
+                    
+                    return 0.1;
+                });
+
+                linkClassificacao.attr("stroke-opacity", d => {
+                    let showLink = false;
+                    
+                    if (d.type === 'vertical') {
+                        showLink = (selectedVertical === "all" || d.target.id === selectedVertical);
+                    } else if (d.type === 'driver') {
+                        showLink = (selectedDriver === "all" || d.target.id === selectedDriver);
+                    }
+                    
+                    // Only show links for companies that pass the filter
+                    if (showLink && d.source.type === 'company') {
+                        const companyNode = nodesClassificacao.find(n => n.id === d.source.id);
+                        if (companyNode) {
+                            let matchesVertical = selectedVertical === "all";
+                            let matchesDriver = selectedDriver === "all";
+                            
+                            if (selectedVertical !== "all") {
+                                matchesVertical = linksClassificacao.some(l => 
+                                    l.type === 'vertical' && 
+                                    l.source.id === companyNode.id && 
+                                    l.target.id === selectedVertical
+                                );
+                            }
+                            
+                            if (selectedDriver !== "all") {
+                                matchesDriver = linksClassificacao.some(l => 
+                                    l.type === 'driver' && 
+                                    l.source.id === companyNode.id && 
+                                    l.target.id === selectedDriver
+                                );
+                            }
+                            
+                            showLink = matchesVertical && matchesDriver;
+                        }
+                    }
+                    
+                    return showLink ? 0.6 : 0.05;
+                });
+
+                labelClassificacao.attr("opacity", d => {
+                    if (d.type === 'vertical' && (selectedVertical === "all" || d.id === selectedVertical)) return 1;
+                    if (d.type === 'driver' && (selectedDriver === "all" || d.id === selectedDriver)) return 1;
+                    if (d.type === 'vertical' && selectedVertical !== "all" && d.id !== selectedVertical) return 0.1;
+                    if (d.type === 'driver' && selectedDriver !== "all" && d.id !== selectedDriver) return 0.1;
+                    
+                    if (d.type === 'company') {
+                        let matchesVertical = selectedVertical === "all";
+                        let matchesDriver = selectedDriver === "all";
+                        
+                        if (selectedVertical !== "all") {
+                            matchesVertical = linksClassificacao.some(l => 
+                                l.type === 'vertical' && 
+                                l.source.id === d.id && 
+                                l.target.id === selectedVertical
+                            );
+                        }
+                        
+                        if (selectedDriver !== "all") {
+                            matchesDriver = linksClassificacao.some(l => 
+                                l.type === 'driver' && 
+                                l.source.id === d.id && 
+                                l.target.id === selectedDriver
+                            );
+                        }
+                        
+                        return (matchesVertical && matchesDriver) ? 1 : 0.1;
+                    }
+                    
+                    return 0.1;
                 });
             }
         }
@@ -697,9 +1291,14 @@
         window.addEventListener("resize", () => {
             const newWidth = window.innerWidth;
             const newHeight = window.innerHeight;
-            svg.attr("width", newWidth).attr("height", newHeight);
-            simulation.force("center", d3.forceCenter(newWidth / 2, newHeight / 2));
-            simulation.alpha(0.3).restart();
+            
+            svgMapa.attr("width", newWidth).attr("height", newHeight);
+            simulationMapa.force("center", d3.forceCenter(newWidth / 2, newHeight / 2));
+            simulationMapa.alpha(0.3).restart();
+            
+            svgClassificacao.attr("width", newWidth).attr("height", newHeight);
+            simulationClassificacao.force("center", d3.forceCenter(newWidth / 2, newHeight / 2));
+            simulationClassificacao.alpha(0.3).restart();
         });
     </script>
 </body>

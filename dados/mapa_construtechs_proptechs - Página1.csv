@@ -1,4 +1,4 @@
-emresa,categoria_principal,subcategoria,subcategoria2
+emresa,categoria_principal,subcategoria,
 GVB - virtualização de construções,Projeto e Viabilidade,BIM,
 iterCode - tecnologia para engenharia,Projeto e Viabilidade,BIM,
 smartBIIM - tecnologia para gestão de obras,Projeto e Viabilidade,BIM,
@@ -25,14 +25,14 @@ propdo,Projeto e Viabilidade,Inteligência de mercado,
 comproterreno,Projeto e Viabilidade,Terrenos,
 BUSCA TERRA,Projeto e Viabilidade,Terrenos,
 1M2,Projeto e Viabilidade,Terrenos,
-GISBASE - geoinformation system,Projeto e Viabilidade,Terrenos,Dados Fundiários
-Geomart,Projeto e Viabilidade,Terrenos,Dados Fundiários
-Solo landbank,Projeto e Viabilidade,Terrenos,Intermediação Digital
-AGREGA - desenvolvimento imobiliário,Projeto e Viabilidade,Terrenos,Intermediação Digital
-allrea,Projeto e Viabilidade,Terrenos,Portal
-Terreno Livre,Projeto e Viabilidade,Terrenos,Portal
-FazendaAberta,Projeto e Viabilidade,Terrenos,Portal
-MyTower,Projeto e Viabilidade,Terrenos,Portal
+GISBASE - geoinformation system,Projeto e Viabilidade,Terrenos,
+Geomart,Projeto e Viabilidade,Terrenos,
+Solo landbank,Projeto e Viabilidade,Terrenos,
+AGREGA - desenvolvimento imobiliário,Projeto e Viabilidade,Terrenos,
+allrea,Projeto e Viabilidade,Terrenos,
+Terreno Livre,Projeto e Viabilidade,Terrenos,
+FazendaAberta,Projeto e Viabilidade,Terrenos,
+MyTower,Projeto e Viabilidade,Terrenos,
 Vértice PRO,Projeto e Viabilidade,Burocracia pública,
 APROVA DIGITAL,Projeto e Viabilidade,Burocracia pública,
 APROVA LEGAL,Projeto e Viabilidade,Burocracia pública,
@@ -40,32 +40,32 @@ USU CAMPEÃO - regularize seu imóvel,Projeto e Viabilidade,Burocracia pública,
 no cartório.com,Projeto e Viabilidade,Burocracia pública,
 Regular Easy - regularizações imobiliárias,Projeto e Viabilidade,Burocracia pública,
 reguLARiza! Brasil,Projeto e Viabilidade,Burocracia pública,
-CASOCA,Projeto e Viabilidade,Projeto,Catálogo de Produtos
-wikeep,Projeto e Viabilidade,Projeto,Catálogo de Produtos
-123 Projetei,Projeto e Viabilidade,Projeto,Catálogo de Produtos
-ARQUILEGO,Projeto e Viabilidade,Projeto,Contratação de Projetistas e Arquitetos
-iENG - projetistas especializados,Projeto e Viabilidade,Projeto,Contratação de Projetistas e Arquitetos
-INOVA URBIS,Projeto e Viabilidade,Projeto,Contratação de Projetistas e Arquitetos
-arco,Projeto e Viabilidade,Projeto,Gestão de Projetos
-construflow,Projeto e Viabilidade,Projeto,Gestão de Projetos
-Refresher,Projeto e Viabilidade,Projeto,Gestão de Projetos
-aerosim,Projeto e Viabilidade,Projeto,Modelagem
-arqgen,Projeto e Viabilidade,Projeto,Modelagem
-ocalev - inovação em engenharia,Projeto e Viabilidade,Projeto,Modelagem
-Gabster,Projeto e Viabilidade,Projeto,Modelagem
-PrevSis,Projeto e Viabilidade,Projeto,Modelagem
-mooble.com,Projeto e Viabilidade,Projeto,Modelagem
-urbIA,Projeto e Viabilidade,Projeto,Modelagem
-seabra - soluções inteligentes,Projeto e Viabilidade,Projeto,Modelagem
-MONÍ,Projeto e Viabilidade,Projeto,Pré-projeto
-instacasa - sua casa num instante,Projeto e Viabilidade,Projeto,Pré-projeto
+CASOCA,Projeto e Viabilidade,Projeto,
+wikeep,Projeto e Viabilidade,Projeto,
+123 Projetei,Projeto e Viabilidade,Projeto,
+ARQUILEGO,Projeto e Viabilidade,Projeto,
+iENG - projetistas especializados,Projeto e Viabilidade,Projeto,
+INOVA URBIS,Projeto e Viabilidade,Projeto,
+arco,Projeto e Viabilidade,Projeto,
+construflow,Projeto e Viabilidade,Projeto,
+Refresher,Projeto e Viabilidade,Projeto,
+aerosim,Projeto e Viabilidade,Projeto,
+arqgen,Projeto e Viabilidade,Projeto,
+ocalev - inovação em engenharia,Projeto e Viabilidade,Projeto,
+Gabster,Projeto e Viabilidade,Projeto,
+PrevSis,Projeto e Viabilidade,Projeto,
+mooble.com,Projeto e Viabilidade,Projeto,
+urbIA,Projeto e Viabilidade,Projeto,
+seabra - soluções inteligentes,Projeto e Viabilidade,Projeto,
+MONÍ,Projeto e Viabilidade,Projeto,
+instacasa - sua casa num instante,Projeto e Viabilidade,Projeto,
 HYGGE,Projeto e Viabilidade,Sustentabilidade,
 endelevo - soluções sustentáveis,Projeto e Viabilidade,Sustentabilidade,
 CUB,Projeto e Viabilidade,Loteamentos,
 trilote,Projeto e Viabilidade,Loteamentos,
-Terravista,Projeto e Viabilidade,Loteamentos,Plataforma de Gestão
-hent,Projeto e Viabilidade,Loteamentos,Plataforma de Gestão
-scae,Projeto e Viabilidade,Loteamentos,Plataforma de Gestão
+Terravista,Projeto e Viabilidade,Loteamentos,
+hent,Projeto e Viabilidade,Loteamentos,
+scae,Projeto e Viabilidade,Loteamentos,
 Mapzer,Projeto e Viabilidade,Smart city,
 INFRACITIES,Projeto e Viabilidade,Smart city,
 estrelas ARCHI,Projeto e Viabilidade,Outros,
@@ -95,70 +95,70 @@ OrçaFascio - software para engenharia,Construção,Orçamento de obra,
 CONSTRUP - Construindo soluções,Construção,Orçamento de obra,
 ALÔ SERRALHEIRO,Construção,Orçamento de obra,
 celere - consultoria de eficiência da construção,Construção,Orçamento de obra,
-ubuild,Construção,Gestão da obra,Diário de Obras
+ubuild,Construção,Gestão da obra,
 dia de obra,Construção,Gestão da obra,
 oppem,Construção,Gestão da obra,
 DIÀRIO DE OBRAS,Construção,Gestão da obra,
 rdo,Construção,Gestão da obra,
-co.urban,Construção,Gestão da obra,Inspeção e Monitoramento
-QualiTab,Construção,Gestão da obra,Inspeção e Monitoramento
-kartado,Construção,Gestão da obra,Inspeção e Monitoramento
-INMETA software,Construção,Gestão da obra,Inspeção e Monitoramento
-CIANOVE,Construção,Gestão da obra,IoT
-ConnectData,Construção,Gestão da obra,IoT
-PHYGITALL,Construção,Gestão da obra,IoT
-PLIPPE,Construção,Gestão da obra,IoT
-Hitemp - soluções tecnológicas,Construção,Gestão da obra,IoT
-novidá,Construção,Gestão da obra,IoT
-data life - GLOBAL,Construção,Gestão da obra,IoT
-Syncker,Construção,Gestão da obra,Planejamento e Controle com AR
-allie,Construção,Gestão da obra,Planejamento e Controle com AR
-SUPERVIZ,Construção,Gestão da obra,Planejamento e Controle com AR
-aug(in),Construção,Gestão da obra,Planejamento e Controle com AR
-IN BUILT,Construção,Gestão da obra,Planejamento e Controle com AR
-octágora,Construção,Gestão da obra,Gestão de Tarefas e Comunicação
-appOBRA,Construção,Gestão da obra,Gestão de Tarefas e Comunicação
-PILAR,Construção,Gestão da obra,Gestão de Tarefas e Comunicação
-toki,Construção,Gestão da obra,Gestão de Tarefas e Comunicação
-builtek,Construção,Gestão da obra,Gestão de Tarefas e Comunicação
-BRICK UP,Construção,Gestão da obra,Gestão de Tarefas e Comunicação
-CONSTRUCT IN,Construção,Gestão da obra,Planejamento e Controle
-construct web - gestão eficiente de obras,Construção,Gestão da obra,Planejamento e Controle
-construo - gestão de projetos para obras,Construção,Gestão da obra,Planejamento e Controle
-stantControle,Construção,Gestão da obra,Planejamento e Controle
-CONSTRU CODE,Construção,Gestão da obra,Planejamento e Controle
-EAP - engenharia de alta performance,Construção,Gestão da obra,Planejamento e Controle
-BOX OBRAS,Construção,Gestão da obra,Planejamento e Controle
-Construpoint,Construção,Gestão da obra,Planejamento e Controle
-concretto - o app de quem constrói,Construção,Gestão da obra,Planejamento e Controle
-makasí,Construção,Gestão da obra,Planejamento e Controle
-prevision,Construção,Gestão da obra,Planejamento e Controle
-obrafit,Construção,Gestão da obra,Planejamento e Controle
-lumina,Construção,Gestão da obra,Planejamento e Controle
-Civil Control,Construção,Gestão da obra,Planejamento e Controle
-Obra.lean,Construção,Gestão da obra,Planejamento e Controle
-obra prima,Construção,Gestão da obra,Planejamento e Controle
-OBRA NA MÃO - Gestão da Construção,Construção,Gestão da obra,Planejamento e Controle
-ARQUIS,Construção,Gestão da obra,Planejamento e Controle
-ConsLog,Construção,Gestão da obra,Planejamento e Controle
-SIGO - ERP,Construção,Gestão da obra,Planejamento e Controle
-mais controle,Construção,Gestão da obra,Planejamento e Controle
-Hinc,Construção,Gestão da obra,Planejamento e Controle
-VEJAOBRA,Construção,Gestão da obra,Planejamento e Controle
-VIGHA,Construção,Gestão da obra,Planejamento e Controle
-OBRAPLAY,Construção,Gestão da obra,Planejamento e Controle
-nimble - virtual solutions,Construção,Gestão da obra,Planejamento e Controle
-KOPER,Construção,Gestão da obra,Planejamento e Controle
-Everflow,Construção,Gestão da obra,Planejamento e Controle
-GERENCIA OBRAS,Construção,Gestão da obra,Planejamento e Controle
-melius - qualidade,Construção,Gestão da obra,Planejamento e Controle
-GESTOP - Gestão Transparente de Obras Públicas,Construção,Gestão da obra,Planejamento e Controle
-GO - GestorObras,Construção,Gestão da obra,Planejamento e Controle
-verum.digital,Construção,Gestão da obra,Planejamento e Controle
-AGILEAN - Aplicativo de Gestão Integrada Lean,Construção,Gestão da obra,Planejamento e Controle
-GESCORPGO,Construção,Gestão da obra,Planejamento e Controle
-GERO OBRAS,Construção,Gestão da obra,Planejamento e Controle
-igile.com,Construção,Gestão da obra,Planejamento e Controle
+co.urban,Construção,Gestão da obra,
+QualiTab,Construção,Gestão da obra,
+kartado,Construção,Gestão da obra,
+INMETA software,Construção,Gestão da obra,
+CIANOVE,Construção,Gestão da obra,
+ConnectData,Construção,Gestão da obra,
+PHYGITALL,Construção,Gestão da obra,
+PLIPPE,Construção,Gestão da obra,
+Hitemp - soluções tecnológicas,Construção,Gestão da obra,
+novidá,Construção,Gestão da obra,
+data life - GLOBAL,Construção,Gestão da obra,
+Syncker,Construção,Gestão da obra,
+allie,Construção,Gestão da obra,
+SUPERVIZ,Construção,Gestão da obra,
+aug(in),Construção,Gestão da obra,
+IN BUILT,Construção,Gestão da obra,
+octágora,Construção,Gestão da obra,
+appOBRA,Construção,Gestão da obra,
+PILAR,Construção,Gestão da obra,
+toki,Construção,Gestão da obra,
+builtek,Construção,Gestão da obra,
+BRICK UP,Construção,Gestão da obra,
+CONSTRUCT IN,Construção,Gestão da obra,
+construct web - gestão eficiente de obras,Construção,Gestão da obra,
+construo - gestão de projetos para obras,Construção,Gestão da obra,
+stantControle,Construção,Gestão da obra,
+CONSTRU CODE,Construção,Gestão da obra,
+EAP - engenharia de alta performance,Construção,Gestão da obra,
+BOX OBRAS,Construção,Gestão da obra,
+Construpoint,Construção,Gestão da obra,
+concretto - o app de quem constrói,Construção,Gestão da obra,
+makasí,Construção,Gestão da obra,
+prevision,Construção,Gestão da obra,
+obrafit,Construção,Gestão da obra,
+lumina,Construção,Gestão da obra,
+Civil Control,Construção,Gestão da obra,
+Obra.lean,Construção,Gestão da obra,
+obra prima,Construção,Gestão da obra,
+OBRA NA MÃO - Gestão da Construção,Construção,Gestão da obra,
+ARQUIS,Construção,Gestão da obra,
+ConsLog,Construção,Gestão da obra,
+SIGO - ERP,Construção,Gestão da obra,
+mais controle,Construção,Gestão da obra,
+Hinc,Construção,Gestão da obra,
+VEJAOBRA,Construção,Gestão da obra,
+VIGHA,Construção,Gestão da obra,
+OBRAPLAY,Construção,Gestão da obra,
+nimble - virtual solutions,Construção,Gestão da obra,
+KOPER,Construção,Gestão da obra,
+Everflow,Construção,Gestão da obra,
+GERENCIA OBRAS,Construção,Gestão da obra,
+melius - qualidade,Construção,Gestão da obra,
+GESTOP - Gestão Transparente de Obras Públicas,Construção,Gestão da obra,
+GO - GestorObras,Construção,Gestão da obra,
+verum.digital,Construção,Gestão da obra,
+AGILEAN - Aplicativo de Gestão Integrada Lean,Construção,Gestão da obra,
+GESCORPGO,Construção,Gestão da obra,
+GERO OBRAS,Construção,Gestão da obra,
+igile.com,Construção,Gestão da obra,
 coordly,Construção,Gestão de documentos,
 todall,Construção,Gestão de documentos,
 analize,Construção,Gestão de documentos,
@@ -166,75 +166,75 @@ oppem.,Construção,Gestão de documentos,
 CASABRUTA - shopping virtual da construção,Construção,Gestão de documentos,
 Datanomik,Construção,Gestão financeira,
 "EVOP - Orçamento, Planejamento e Gestão de Obras",Construção,Gestão financeira,
-habitissimo,Construção,MDO,Contratação e Treinamento
-CONSTRUCONNECT,Construção,MDO,Contratação e Treinamento
-ConstruMatch!,Construção,MDO,Contratação e Treinamento
-Parceiro da Construção,Construção,MDO,Contratação e Treinamento
-Esphera academy,Construção,MDO,Contratação e Treinamento
-izicasa,Construção,MDO,Contratação e Treinamento
-Jobber,Construção,MDO,Contratação e Treinamento
-estudeAE,Construção,MDO,Contratação e Treinamento
-bilds.com,Construção,MDO,Contratação e Treinamento
-Tecza,Construção,MDO,Contratação e Treinamento
-portal acústica,Construção,MDO,Contratação e Treinamento
-SMART SKY - Tech Hub,Construção,MDO,Contratação e Treinamento
-Quem Contrato,Construção,MDO,Contratação e Treinamento
-Construgame,Construção,MDO,Gestão
-mentor construção,Construção,MDO,Gestão
-team move,Construção,MDO,Gestão
-CLICK PONTO,Construção,MDO,Gestão
-ON SAFETY,Construção,MDO,Segurança
-OITCHAU,Construção,MDO,Segurança
--,Construção,MDO,Segurança
-SafetyTec,Construção,MDO,Segurança
-MuvRental,Construção,Maquinário e materiais,Aluguel e Aquisição de Maquinário
-andaluga - locação de máquinas,Construção,Maquinário e materiais,Aluguel e Aquisição de Maquinário
-Trucadão,Construção,Maquinário e materiais,Aluguel e Aquisição de Maquinário
-VAI LOCAR equipamentos,Construção,Maquinário e materiais,Aluguel e Aquisição de Maquinário
-RENDALOMAQ,Construção,Maquinário e materiais,Aluguel e Aquisição de Maquinário
-Alugalogo,Construção,Maquinário e materiais,Aluguel e Aquisição de Maquinário
-SANSTONE,Construção,Maquinário e materiais,Cotação de Materiais
-FLOPO,Construção,Maquinário e materiais,Cotação de Materiais
-ORÇAQUI,Construção,Maquinário e materiais,Cotação de Materiais
-cotacasa,Construção,Maquinário e materiais,Cotação de Materiais
-Achei4u,Construção,Maquinário e materiais,Cotação de Materiais
-nanoprice,Construção,Maquinário e materiais,Cotação de Materiais
-expert,Construção,Maquinário e materiais,Cotação de Materiais
-membran-i,Construção,Maquinário e materiais,Cotação de Materiais
-concreto usinado .com.br,Construção,Maquinário e materiais,Cotação de Materiais
-materiaL agora!,Construção,Maquinário e materiais,Cotação de Materiais
-CONSTRUP - construindo soluções,Construção,Maquinário e materiais,Cotação de Materiais
-painel de preços da construção,Construção,Maquinário e materiais,Cotação de Materiais
-EU NA OBRA .com,Construção,Maquinário e materiais,Cotação de Materiais
-CONCRETE JÁ,Construção,Maquinário e materiais,Cotação de Materiais
-LojadaConstrução,Construção,Maquinário e materiais,Marketplace de Materiais
-casa e garagem,Construção,Maquinário e materiais,Marketplace de Materiais
-construHUB,Construção,Maquinário e materiais,Marketplace de Materiais
-syx,Construção,Maquinário e materiais,Marketplace de Materiais
-fobbi,Construção,Maquinário e materiais,Marketplace de Materiais
-COBUILD,Construção,Maquinário e materiais,Marketplace de Materiais
-Obra Tá On,Construção,Maquinário e materiais,Marketplace de Materiais
-Sooper,Construção,Maquinário e materiais,Marketplace de Materiais
-oruby - o seu portal da construção,Construção,Maquinário e materiais,Marketplace de Materiais
-iBuild,Construção,Maquinário e materiais,Marketplace de Materiais
-obra show - delivery da construção,Construção,Maquinário e materiais,Marketplace de Materiais
-333OBRA - O mercado da Construção,Construção,Maquinário e materiais,Marketplace de Materiais
-teky,Construção,Maquinário e materiais,Marketplace de Materiais
-CASABRUTA - shopping virtual da construção,Construção,Maquinário e materiais,Marketplace de Materiais
-estoque parado,Construção,Maquinário e materiais,Marketplace de Materiais
-mercadão da obra,Construção,Maquinário e materiais,Marketplace de Materiais
-Hidrau conex - materiais hidráulicos,Construção,Maquinário e materiais,Marketplace de Materiais
-SOS OBRA,Construção,Maquinário e materiais,Marketplace de Materiais
-Arqplace - Arquitetura no lugar certo,Construção,Maquinário e materiais,Marketplace de Materiais
-Mercado Obra,Construção,Maquinário e materiais,Marketplace de Materiais
-ALMOX,Construção,Maquinário e materiais,Gestão de Estoque
-james tip,Construção,Maquinário e materiais,Gestão de Estoque
-ALMOB - Gestão para Almoxarifado,Construção,Maquinário e materiais,Gestão de Estoque
-SupplyMaps - Soluções em compras B2B,Construção,Maquinário e materiais,Gestão de Estoque
-zatio,Construção,Maquinário e materiais,Gestão de Estoque
-CPallet,Construção,Maquinário e materiais,Gestão de Estoque
-GaussFleet,Construção,Maquinário e materiais,Telemetria
-BobTon - Conectando a Construção do País,Construção,Maquinário e materiais,Telemetria
+habitissimo,Construção,MDO,
+CONSTRUCONNECT,Construção,MDO,
+ConstruMatch!,Construção,MDO,
+Parceiro da Construção,Construção,MDO,
+Esphera academy,Construção,MDO,
+izicasa,Construção,MDO,
+Jobber,Construção,MDO,
+estudeAE,Construção,MDO,
+bilds.com,Construção,MDO,
+Tecza,Construção,MDO,
+portal acústica,Construção,MDO,
+SMART SKY - Tech Hub,Construção,MDO,
+Quem Contrato,Construção,MDO,
+Construgame,Construção,MDO,
+mentor construção,Construção,MDO,
+team move,Construção,MDO,
+CLICK PONTO,Construção,MDO,
+ON SAFETY,Construção,MDO,
+OITCHAU,Construção,MDO,
+-,Construção,MDO,
+SafetyTec,Construção,MDO,
+MuvRental,Construção,Maquinário e materiais,
+andaluga - locação de máquinas,Construção,Maquinário e materiais,
+Trucadão,Construção,Maquinário e materiais,
+VAI LOCAR equipamentos,Construção,Maquinário e materiais,
+RENDALOMAQ,Construção,Maquinário e materiais,
+Alugalogo,Construção,Maquinário e materiais,
+SANSTONE,Construção,Maquinário e materiais,
+FLOPO,Construção,Maquinário e materiais,
+ORÇAQUI,Construção,Maquinário e materiais,
+cotacasa,Construção,Maquinário e materiais,
+Achei4u,Construção,Maquinário e materiais,
+nanoprice,Construção,Maquinário e materiais,
+expert,Construção,Maquinário e materiais,
+membran-i,Construção,Maquinário e materiais,
+concreto usinado .com.br,Construção,Maquinário e materiais,
+materiaL agora!,Construção,Maquinário e materiais,
+CONSTRUP - construindo soluções,Construção,Maquinário e materiais,
+painel de preços da construção,Construção,Maquinário e materiais,
+EU NA OBRA .com,Construção,Maquinário e materiais,
+CONCRETE JÁ,Construção,Maquinário e materiais,
+LojadaConstrução,Construção,Maquinário e materiais,
+casa e garagem,Construção,Maquinário e materiais,
+construHUB,Construção,Maquinário e materiais,
+syx,Construção,Maquinário e materiais,
+fobbi,Construção,Maquinário e materiais,
+COBUILD,Construção,Maquinário e materiais,
+Obra Tá On,Construção,Maquinário e materiais,
+Sooper,Construção,Maquinário e materiais,
+oruby - o seu portal da construção,Construção,Maquinário e materiais,
+iBuild,Construção,Maquinário e materiais,
+obra show - delivery da construção,Construção,Maquinário e materiais,
+333OBRA - O mercado da Construção,Construção,Maquinário e materiais,
+teky,Construção,Maquinário e materiais,
+CASABRUTA - shopping virtual da construção,Construção,Maquinário e materiais,
+estoque parado,Construção,Maquinário e materiais,
+mercadão da obra,Construção,Maquinário e materiais,
+Hidrau conex - materiais hidráulicos,Construção,Maquinário e materiais,
+SOS OBRA,Construção,Maquinário e materiais,
+Arqplace - Arquitetura no lugar certo,Construção,Maquinário e materiais,
+Mercado Obra,Construção,Maquinário e materiais,
+ALMOX,Construção,Maquinário e materiais,
+james tip,Construção,Maquinário e materiais,
+ALMOB - Gestão para Almoxarifado,Construção,Maquinário e materiais,
+SupplyMaps - Soluções em compras B2B,Construção,Maquinário e materiais,
+zatio,Construção,Maquinário e materiais,
+CPallet,Construção,Maquinário e materiais,
+GaussFleet,Construção,Maquinário e materiais,
+BobTon - Conectando a Construção do País,Construção,Maquinário e materiais,
 upgrade,Construção,Materiais de construção,
 JASMMÍN,Construção,Materiais de construção,
 MOSHE 3000,Construção,Materiais de construção,
@@ -247,92 +247,92 @@ X LAM ENGINEERING,Construção,Materiais de construção,
 Tetris Modular,Construção,Materiais de construção,
 -,Construção,Materiais de construção,
 TimBau Estruturas,Construção,Materiais de construção,
-EBRICKS,Construção,Materiais de construção,Novos Materiais
-amera,Construção,Materiais de construção,Novos Materiais
-ECOTELHASOLAR,Construção,Materiais de construção,Novos Materiais
-mush,Construção,Materiais de construção,Novos Materiais
-Telhas TELITE,Construção,Materiais de construção,Novos Materiais
-Tégula Solar,Construção,Materiais de construção,Novos Materiais
-4VANTS - vision analytics,Construção,Mapeamento e acompanhamento,Drones
-ALTAVE,Construção,Mapeamento e acompanhamento,Drones
-Facilit'Air - Soluções por Drones,Construção,Mapeamento e acompanhamento,Drones
-FLUGDRONES,Construção,Mapeamento e acompanhamento,Drones
-BIMSTART,Construção,Mapeamento e acompanhamento,Drones
-OBRA 3D,Construção,Mapeamento e acompanhamento,Drones
-mappa,Construção,Mapeamento e acompanhamento,Drones
-GEOINOVA,Construção,Mapeamento e acompanhamento,Drones
-Maply,Construção,Mapeamento e acompanhamento,Drones
-DronEng - Drones e Engenharia,Construção,Mapeamento e acompanhamento,Drones
-LEVITAR - drone intelligence,Construção,Mapeamento e acompanhamento,Drones
-"PROP - drones, soluções aéreas",Construção,Mapeamento e acompanhamento,Drones
-PIX FORCE,Construção,Mapeamento e acompanhamento,Drones
-LORD DRONE - imagens inteligentes,Construção,Mapeamento e acompanhamento,Drones
-TERRA ump DRONES,Construção,Mapeamento e acompanhamento,Drones
-WillFly,Construção,Mapeamento e acompanhamento,Drones
-DURASA,Construção,Métodos construtivos,Construção Modular
-AMERA,Construção,Métodos construtivos,Construção Modular
-MINIMOD,Construção,Métodos construtivos,Construção Modular
-immergrun - construções inteligentes,Construção,Métodos construtivos,Construção Modular
-techome,Construção,Métodos construtivos,Construção Modular
-inovahouse,Construção,Métodos construtivos,Construção Modular
-VISIA,Construção,Métodos construtivos,Construção Modular
-modulife - construção modular,Construção,Métodos construtivos,Construção Modular
-iBUILD - construções inteligentes,Construção,Métodos construtivos,Construção Modular
-CONTAINER EXPRESS,Construção,Métodos construtivos,Construção Modular
-TEGO FRAME,Construção,Métodos construtivos,Construção Modular
-oak offsite,Construção,Métodos construtivos,Construção Modular
-CSTEEL,Construção,Métodos construtivos,Construção Modular
-TCI,Construção,Métodos construtivos,Construção Modular
-noah - wood building design,Construção,Métodos construtivos,Construção Modular
-EcoNEXT - the next generation of building,Construção,Métodos construtivos,Construção Modular
-MODUZ - construção modular,Construção,Métodos construtivos,Construção Modular
-tinylife,Construção,Métodos construtivos,Construção Modular
-CONTAINER MODULAR,Construção,Métodos construtivos,Construção Modular
-Docking Modules - construindo o futuro,Construção,Métodos construtivos,Construção Modular
-HEIMA SOLUTIONS,Construção,Métodos construtivos,Construção Modular
-MODOOLAR - construções inteligentes,Construção,Métodos construtivos,Construção Modular
-LOCARES - Casa Containers e Projetos Customizados,Construção,Métodos construtivos,Construção Modular
-LOG BOXX,Construção,Métodos construtivos,Construção Modular
-Universo dos Containers - projetos residenciais e comerciais,Construção,Métodos construtivos,Construção Modular
-MORECO - modular rental company,Construção,Métodos construtivos,Construção Modular
-K.BANA,Construção,Métodos construtivos,Construção Modular
-d.,Construção,Métodos construtivos,Construção Modular
-MODHUS - arquitetura modular,Construção,Métodos construtivos,Construção Modular
-mora,Construção,Métodos construtivos,Construção Modular
--,Construção,Métodos construtivos,Construção Modular
-tiny Brasil,Construção,Métodos construtivos,Construção Modular
-cubicset - More for Less,Construção,Métodos construtivos,Construção Modular
-STEEL GROUP,Construção,Métodos construtivos,Construção Modular
-ARATAU Construção Modular,Construção,Métodos construtivos,Construção Modular
--,Construção,Métodos construtivos,Construção Modular
-MODO,Construção,Métodos construtivos,Construção Modular
-umbria construção modular,Construção,Métodos construtivos,Construção Modular
-capsu,Construção,Métodos construtivos,Construção Modular
--,Construção,Métodos construtivos,Construção Modular
-PRISMA,Construção,Métodos construtivos,Construção Modular
-DOMUS3D - printing the future in concrete,Construção,Métodos construtivos,Impressão 3D
-nano¹,Construção,Métodos construtivos,Impressão 3D
-BioBox - Sustainable Houses,Construção,Métodos construtivos,Pré-Fabricação
-oztra,Construção,Métodos construtivos,Pré-Fabricação
-smart pods,Construção,Métodos construtivos,Pré-Fabricação
-esphera - Soluções Ambientais,Construção,Sustentabilidade,Redução e destino de resíduos
-SkambO OBRA,Construção,Sustentabilidade,Redução e destino de resíduos
-MEURESÍDUO,Construção,Sustentabilidade,Redução e destino de resíduos
-eloverde,Construção,Sustentabilidade,Redução e destino de resíduos
-NETResíduos,Construção,Sustentabilidade,Redução e destino de resíduos
-Vertown - nada se perde,Construção,Sustentabilidade,Redução e destino de resíduos
-ambisis - software para gestão ambiental,Construção,Sustentabilidade,Redução e destino de resíduos
-B2Blue.com - valorizando seu resíduo,Construção,Sustentabilidade,Redução e destino de resíduos
-okena,Construção,Sustentabilidade,Redução e destino de resíduos
-destinejá,Construção,Sustentabilidade,Redução e destino de resíduos
-aterra,Construção,Sustentabilidade,Redução e destino de resíduos
-LANDAPP,Construção,Sustentabilidade,Redução e destino de resíduos
-POLEN,Construção,Sustentabilidade,Redução e destino de resíduos
-recigreen - tecnologia verde,Construção,Sustentabilidade,Redução e destino de resíduos
-RECICLA.CLUB,Construção,Sustentabilidade,Redução e destino de resíduos
-revi,Construção,Sustentabilidade,Redução e destino de resíduos
-GREENPLAT - accelerating sustainable production,Construção,Sustentabilidade,Redução e destino de resíduos
-ecomud - soluções ambientais e pavimentação,Construção,Sustentabilidade,Redução e destino de resíduos
+EBRICKS,Construção,Materiais de construção,
+amera,Construção,Materiais de construção,
+ECOTELHASOLAR,Construção,Materiais de construção,
+mush,Construção,Materiais de construção,
+Telhas TELITE,Construção,Materiais de construção,
+Tégula Solar,Construção,Materiais de construção,
+4VANTS - vision analytics,Construção,Mapeamento e acompanhamento,
+ALTAVE,Construção,Mapeamento e acompanhamento,
+Facilit'Air - Soluções por Drones,Construção,Mapeamento e acompanhamento,
+FLUGDRONES,Construção,Mapeamento e acompanhamento,
+BIMSTART,Construção,Mapeamento e acompanhamento,
+OBRA 3D,Construção,Mapeamento e acompanhamento,
+mappa,Construção,Mapeamento e acompanhamento,
+GEOINOVA,Construção,Mapeamento e acompanhamento,
+Maply,Construção,Mapeamento e acompanhamento,
+DronEng - Drones e Engenharia,Construção,Mapeamento e acompanhamento,
+LEVITAR - drone intelligence,Construção,Mapeamento e acompanhamento,
+"PROP - drones, soluções aéreas",Construção,Mapeamento e acompanhamento,
+PIX FORCE,Construção,Mapeamento e acompanhamento,
+LORD DRONE - imagens inteligentes,Construção,Mapeamento e acompanhamento,
+TERRA ump DRONES,Construção,Mapeamento e acompanhamento,
+WillFly,Construção,Mapeamento e acompanhamento,
+DURASA,Construção,Métodos construtivos,
+AMERA,Construção,Métodos construtivos,
+MINIMOD,Construção,Métodos construtivos,
+immergrun - construções inteligentes,Construção,Métodos construtivos,
+techome,Construção,Métodos construtivos,
+inovahouse,Construção,Métodos construtivos,
+VISIA,Construção,Métodos construtivos,
+modulife - construção modular,Construção,Métodos construtivos,
+iBUILD - construções inteligentes,Construção,Métodos construtivos,
+CONTAINER EXPRESS,Construção,Métodos construtivos,
+TEGO FRAME,Construção,Métodos construtivos,
+oak offsite,Construção,Métodos construtivos,
+CSTEEL,Construção,Métodos construtivos,
+TCI,Construção,Métodos construtivos,
+noah - wood building design,Construção,Métodos construtivos,
+EcoNEXT - the next generation of building,Construção,Métodos construtivos,
+MODUZ - construção modular,Construção,Métodos construtivos,
+tinylife,Construção,Métodos construtivos,
+CONTAINER MODULAR,Construção,Métodos construtivos,
+Docking Modules - construindo o futuro,Construção,Métodos construtivos,
+HEIMA SOLUTIONS,Construção,Métodos construtivos,
+MODOOLAR - construções inteligentes,Construção,Métodos construtivos,
+LOCARES - Casa Containers e Projetos Customizados,Construção,Métodos construtivos,
+LOG BOXX,Construção,Métodos construtivos,
+Universo dos Containers - projetos residenciais e comerciais,Construção,Métodos construtivos,
+MORECO - modular rental company,Construção,Métodos construtivos,
+K.BANA,Construção,Métodos construtivos,
+d.,Construção,Métodos construtivos,
+MODHUS - arquitetura modular,Construção,Métodos construtivos,
+mora,Construção,Métodos construtivos,
+-,Construção,Métodos construtivos,
+tiny Brasil,Construção,Métodos construtivos,
+cubicset - More for Less,Construção,Métodos construtivos,
+STEEL GROUP,Construção,Métodos construtivos,
+ARATAU Construção Modular,Construção,Métodos construtivos,
+-,Construção,Métodos construtivos,
+MODO,Construção,Métodos construtivos,
+umbria construção modular,Construção,Métodos construtivos,
+capsu,Construção,Métodos construtivos,
+-,Construção,Métodos construtivos,
+PRISMA,Construção,Métodos construtivos,
+DOMUS3D - printing the future in concrete,Construção,Métodos construtivos,
+nano¹,Construção,Métodos construtivos,
+BioBox - Sustainable Houses,Construção,Métodos construtivos,
+oztra,Construção,Métodos construtivos,
+smart pods,Construção,Métodos construtivos,
+esphera - Soluções Ambientais,Construção,Sustentabilidade,
+SkambO OBRA,Construção,Sustentabilidade,
+MEURESÍDUO,Construção,Sustentabilidade,
+eloverde,Construção,Sustentabilidade,
+NETResíduos,Construção,Sustentabilidade,
+Vertown - nada se perde,Construção,Sustentabilidade,
+ambisis - software para gestão ambiental,Construção,Sustentabilidade,
+B2Blue.com - valorizando seu resíduo,Construção,Sustentabilidade,
+okena,Construção,Sustentabilidade,
+destinejá,Construção,Sustentabilidade,
+aterra,Construção,Sustentabilidade,
+LANDAPP,Construção,Sustentabilidade,
+POLEN,Construção,Sustentabilidade,
+recigreen - tecnologia verde,Construção,Sustentabilidade,
+RECICLA.CLUB,Construção,Sustentabilidade,
+revi,Construção,Sustentabilidade,
+GREENPLAT - accelerating sustainable production,Construção,Sustentabilidade,
+ecomud - soluções ambientais e pavimentação,Construção,Sustentabilidade,
 FACILITAT - desempenho no pós-obra,Construção,Gestão pós obra,
 app assist,Construção,Gestão pós obra,
 PREDIALIZE,Construção,Gestão pós obra,
@@ -424,15 +424,15 @@ blisk solutions,Aquisição,Qualificação de Leads,
 Leadfy,Aquisição,Qualificação de Leads,
 LeadFlow,Aquisição,Qualificação de Leads,
 blow,Aquisição,Canais de comunicação,
-Intelizap business,Aquisição,Canais de comunicação,Chatbots
-cosmobots,Aquisição,Canais de comunicação,Chatbots
-Acelérion,Aquisição,Canais de comunicação,Chatbots
-ezok.,Aquisição,Canais de comunicação,Chatbots
-FireFly,Aquisição,Canais de comunicação,Chatbots
-Mila,Aquisição,Canais de comunicação,Chatbots
-duotalk,Aquisição,Canais de comunicação,Chatbots
-asksuite,Aquisição,Canais de comunicação,Chatbots
-Digit.ai - Solução MAGIT,Aquisição,Canais de comunicação,Chatbots
+Intelizap business,Aquisição,Canais de comunicação,
+cosmobots,Aquisição,Canais de comunicação,
+Acelérion,Aquisição,Canais de comunicação,
+ezok.,Aquisição,Canais de comunicação,
+FireFly,Aquisição,Canais de comunicação,
+Mila,Aquisição,Canais de comunicação,
+duotalk,Aquisição,Canais de comunicação,
+asksuite,Aquisição,Canais de comunicação,
+Digit.ai - Solução MAGIT,Aquisição,Canais de comunicação,
 immobile - software imobiliário,Aquisição,Gestão de carteira,
 Lastro,Aquisição,Gestão de carteira,
 Risknow,Aquisição,Gestão de carteira,
@@ -504,14 +504,14 @@ prop. menu,Aquisição,Portal,
 web escritórios,Aquisição,Portal,
 web industrial,Aquisição,Portal,
 ANUVA,Aquisição,Portal,
-Temporada Livre,Aquisição,Portal,Aluguel
-WebQuarto,Aquisição,Portal,Aluguel
-2lar.com,Aquisição,Portal,Aluguel
-flat.com.br,Aquisição,Portal,Aluguel
-viajar temporada,Aquisição,Portal,Aluguel
-um/quarto (1/4),Aquisição,Portal,Aluguel
-AlugaON,Aquisição,Portal,Aluguel
-pousadas.top,Aquisição,Portal,Aluguel
+Temporada Livre,Aquisição,Portal,
+WebQuarto,Aquisição,Portal,
+2lar.com,Aquisição,Portal,
+flat.com.br,Aquisição,Portal,
+viajar temporada,Aquisição,Portal,
+um/quarto (1/4),Aquisição,Portal,
+AlugaON,Aquisição,Portal,
+pousadas.top,Aquisição,Portal,
 DWV App,Aquisição,Canal de parcerias,
 OTTO,Aquisição,Canal de parcerias,
 Recruta-Imob,Aquisição,Canal de parcerias,
@@ -545,21 +545,21 @@ HomeHub - by Judice&Araujo,Aquisição,Intermediação digital,
 LAR,Aquisição,Intermediação digital,
 IMOTECH - inovação e tecnologia,Aquisição,Intermediação digital,
 ocka,Aquisição,Intermediação digital,
-Aluggar,Aquisição,Intermediação digital,Aluguel
-7cantos.com,Aquisição,Intermediação digital,Aluguel
-mobg,Aquisição,Intermediação digital,Aluguel
-MUDEii,Aquisição,Intermediação digital,Aluguel
-UP Estate,Aquisição,Intermediação digital,Aluguel
-aluguel pago,Aquisição,Intermediação digital,Aluguel
-BoldHouse,Aquisição,Intermediação digital,Aluguel
-PlacetoBe,Aquisição,Intermediação digital,Aluguel Comercial
-Silla Spot,Aquisição,Intermediação digital,Aluguel Comercial
-Loppo,Aquisição,Intermediação digital,Aluguel Comercial
-Matched,Aquisição,Intermediação digital,Aluguel Comercial
-Plaza,Aquisição,Intermediação digital,Aluguel Comercial
-alugaê,Aquisição,Intermediação digital,Aluguel Comercial
-SuaQuadra,Aquisição,Intermediação digital,Aluguel Comercial
-Symbaros,Aquisição,Intermediação digital,Aluguel Comercial
+Aluggar,Aquisição,Intermediação digital,
+7cantos.com,Aquisição,Intermediação digital,
+mobg,Aquisição,Intermediação digital,
+MUDEii,Aquisição,Intermediação digital,
+UP Estate,Aquisição,Intermediação digital,
+aluguel pago,Aquisição,Intermediação digital,
+BoldHouse,Aquisição,Intermediação digital,
+PlacetoBe,Aquisição,Intermediação digital,
+Silla Spot,Aquisição,Intermediação digital,
+Loppo,Aquisição,Intermediação digital,
+Matched,Aquisição,Intermediação digital,
+Plaza,Aquisição,Intermediação digital,
+alugaê,Aquisição,Intermediação digital,
+SuaQuadra,Aquisição,Intermediação digital,
+Symbaros,Aquisição,Intermediação digital,
 casaprogramada,Aquisição,Desitermediação,
 Orbitare,Aquisição,Desitermediação,
 Proprietário Direto,Aquisição,Desitermediação,
@@ -569,10 +569,10 @@ ABRIGAR - LIcitações de imóveis particulares,Aquisição,Desitermediação,
 zero comissão,Aquisição,Desitermediação,
 VSIO,Aquisição,Desitermediação,
 nobeehouse,Aquisição,Desitermediação,
-mell.ro,Aquisição,Desitermediação,Aluguel
-moben,Aquisição,Desitermediação,Aluguel
-zimobi,Aquisição,Desitermediação,Aluguel
-querolar,Aquisição,Desitermediação,Aluguel
+mell.ro,Aquisição,Desitermediação,
+moben,Aquisição,Desitermediação,
+zimobi,Aquisição,Desitermediação,
+querolar,Aquisição,Desitermediação,
 ladyge,Aquisição,Plataforma de investimento,
 CAPTAL,Aquisição,Plataforma de investimento,
 Vórtx QR Tokenizadora,Aquisição,Plataforma de investimento,
@@ -609,37 +609,37 @@ euAcerto,Aquisição,Análise de locatário,
 imobmeet,Aquisição,Showcase,
 FOTOP,Aquisição,Showcase,
 Alice Wonders - Tech Driven Experiences,Aquisição,Showcase,
-FYRStudio,Aquisição,Showcase,Tour Virtual
-3D explora,Aquisição,Showcase,Tour Virtual
-piperz,Aquisição,Showcase,Tour Virtual
-ATT,Aquisição,Showcase,Tour Virtual
-SKYLINE - inovação & produções,Aquisição,Showcase,Tour Virtual
-3 blocks,Aquisição,Showcase,Tour Virtual
-My360 realidade virtual,Aquisição,Showcase,Tour Virtual
-sheephouse,Aquisição,Showcase,Tour Virtual
-Escala 3D,Aquisição,Showcase,Tour Virtual
-tzs lab,Aquisição,Showcase,Tour Virtual
-yourside group,Aquisição,Showcase,Tour Virtual
-hollox,Aquisição,Showcase,VR
-im xr,Aquisição,Showcase,VR
-setvirtual,Aquisição,Showcase,VR
-VOR,Aquisição,Showcase,VR
-Dropview,Aquisição,Showcase,VR
-Fuel,Aquisição,Showcase,VR
-beupse,Aquisição,Showcase,VR
-meu tour 360 - realidade virtual,Aquisição,Showcase,VR
-VR one,Aquisição,Showcase,VR
-MeuPasseioVirtual,Aquisição,Showcase,VR
-XSpaces,Aquisição,Showcase,VR
-iTeleport,Aquisição,Showcase,VR
-GENIA,Aquisição,Showcase,VR
-MVV Realidade Virtual,Aquisição,Showcase,VR
-vistahub,Aquisição,Showcase,VR
-banib - Tour Virtual para negócios,Aquisição,Showcase,VR
-3D Pictures - visualizando o futuro,Aquisição,Showcase,VR
-vila 360,Aquisição,Showcase,VR
-blue storm studios,Aquisição,Showcase,VR
-Bugaboo Studio,Aquisição,Showcase,VR
+FYRStudio,Aquisição,Showcase,
+3D explora,Aquisição,Showcase,
+piperz,Aquisição,Showcase,
+ATT,Aquisição,Showcase,
+SKYLINE - inovação & produções,Aquisição,Showcase,
+3 blocks,Aquisição,Showcase,
+My360 realidade virtual,Aquisição,Showcase,
+sheephouse,Aquisição,Showcase,
+Escala 3D,Aquisição,Showcase,
+tzs lab,Aquisição,Showcase,
+yourside group,Aquisição,Showcase,
+hollox,Aquisição,Showcase,
+im xr,Aquisição,Showcase,
+setvirtual,Aquisição,Showcase,
+VOR,Aquisição,Showcase,
+Dropview,Aquisição,Showcase,
+Fuel,Aquisição,Showcase,
+beupse,Aquisição,Showcase,
+meu tour 360 - realidade virtual,Aquisição,Showcase,
+VR one,Aquisição,Showcase,
+MeuPasseioVirtual,Aquisição,Showcase,
+XSpaces,Aquisição,Showcase,
+iTeleport,Aquisição,Showcase,
+GENIA,Aquisição,Showcase,
+MVV Realidade Virtual,Aquisição,Showcase,
+vistahub,Aquisição,Showcase,
+banib - Tour Virtual para negócios,Aquisição,Showcase,
+3D Pictures - visualizando o futuro,Aquisição,Showcase,
+vila 360,Aquisição,Showcase,
+blue storm studios,Aquisição,Showcase,
+Bugaboo Studio,Aquisição,Showcase,
 Garantii,Aquisição,Garantia Locatícia,
 Alugue Certo,Aquisição,Garantia Locatícia,
 ondasegura,Aquisição,Garantia Locatícia,
@@ -679,47 +679,47 @@ Parcelinha Digital,Aquisição,Captação de recursos,
 AmFi,Aquisição,Captação de recursos,
 NanoCapital,Aquisição,Captação de recursos,
 UP Consórcios,Aquisição,Captação de recursos,
-CREDUP - crédito incentivado,Aquisição,Captação de recursos,Home Equity
-crediblue,Aquisição,Captação de recursos,Home Equity
-Bank2B,Aquisição,Captação de recursos,Home Equity
-bom pra crédito,Aquisição,Captação de recursos,Home Equity
-aMORA,Aquisição,Captação de recursos,Home Equity
-TKS Cash,Aquisição,Captação de recursos,Home Equity
-Lend Me,Aquisição,Captação de recursos,Home Equity
-house credi,Aquisição,Captação de recursos,Home Equity
-Pontte,Aquisição,Captação de recursos,Home Equity
-CrediCatarina,Aquisição,Captação de recursos,Home Equity
-cedulla,Aquisição,Captação de recursos,Antecipação de Recebíveis
-cashgo,Aquisição,Captação de recursos,Antecipação de Recebíveis
-DUNNING - Gestão de Recebíveis,Aquisição,Captação de recursos,Antecipação de Recebíveis
-Bold.Finance,Aquisição,Captação de recursos,Antecipação de Recebíveis
-HOMELEND,Aquisição,Captação de recursos,Crédito Imobiliário
-credikasa,Aquisição,Captação de recursos,Crédito Imobiliário
-financiei.,Aquisição,Captação de recursos,Crédito Imobiliário
-zixpay,Aquisição,Captação de recursos,Crédito Imobiliário
-neohome,Aquisição,Captação de recursos,Crédito Imobiliário
-R3KA,Aquisição,Captação de recursos,Crédito Imobiliário
-Volpi,Aquisição,Captação de recursos,Crédito Imobiliário
-Felí,Aquisição,Captação de recursos,Crédito Imobiliário
-concede,Aquisição,Captação de recursos,Crédito Imobiliário
-BRICKER,Aquisição,Captação de recursos,Crédito Imobiliário
-LEVI,Aquisição,Captação de recursos,Crédito Imobiliário
-APPROVA,Aquisição,Captação de recursos,Crédito Imobiliário
-melhortaxa,Aquisição,Captação de recursos,Crédito Imobiliário
-Consórcio eutbem ;-),Aquisição,Captação de recursos,Crédito Imobiliário
-CrediHabitar,Aquisição,Captação de recursos,Crédito Imobiliário
-Turn2C,Aquisição,Captação de recursos,Crédito Imobiliário
-gruppi,Aquisição,Captação de recursos,Crédito Imobiliário
-Mycon,Aquisição,Captação de recursos,Crédito Imobiliário
-sejabest,Aquisição,Captação de recursos,Crédito Imobiliário
-mudhra,Aquisição,Captação de recursos,Crédito Imobiliário
-ASSINO - crédito imobiliário,Aquisição,Captação de recursos,Crédito Imobiliário
-credimorar,Aquisição,Captação de recursos,Crédito Imobiliário
-Mahauz,Aquisição,Captação de recursos,Crédito Imobiliário
-EasyCrédito - seu crédito na palma da mão,Aquisição,Captação de recursos,Crédito Imobiliário
-Investimento Certo,Aquisição,Captação de recursos,Crédito Imobiliário
-Morada dos Sonhos,Aquisição,Captação de recursos,Crédito Imobiliário
-Minha Casa Financiada,Aquisição,Captação de recursos,Crédito Imobiliário
+CREDUP - crédito incentivado,Aquisição,Captação de recursos,
+crediblue,Aquisição,Captação de recursos,
+Bank2B,Aquisição,Captação de recursos,
+bom pra crédito,Aquisição,Captação de recursos,
+aMORA,Aquisição,Captação de recursos,
+TKS Cash,Aquisição,Captação de recursos,
+Lend Me,Aquisição,Captação de recursos,
+house credi,Aquisição,Captação de recursos,
+Pontte,Aquisição,Captação de recursos,
+CrediCatarina,Aquisição,Captação de recursos,
+cedulla,Aquisição,Captação de recursos,
+cashgo,Aquisição,Captação de recursos,
+DUNNING - Gestão de Recebíveis,Aquisição,Captação de recursos,
+Bold.Finance,Aquisição,Captação de recursos,
+HOMELEND,Aquisição,Captação de recursos,
+credikasa,Aquisição,Captação de recursos,
+financiei.,Aquisição,Captação de recursos,
+zixpay,Aquisição,Captação de recursos,
+neohome,Aquisição,Captação de recursos,
+R3KA,Aquisição,Captação de recursos,
+Volpi,Aquisição,Captação de recursos,
+Felí,Aquisição,Captação de recursos,
+concede,Aquisição,Captação de recursos,
+BRICKER,Aquisição,Captação de recursos,
+LEVI,Aquisição,Captação de recursos,
+APPROVA,Aquisição,Captação de recursos,
+melhortaxa,Aquisição,Captação de recursos,
+Consórcio eutbem ,-),Aquisição,Crédito Imobiliário
+CrediHabitar,Aquisição,Captação de recursos,
+Turn2C,Aquisição,Captação de recursos,
+gruppi,Aquisição,Captação de recursos,
+Mycon,Aquisição,Captação de recursos,
+sejabest,Aquisição,Captação de recursos,
+mudhra,Aquisição,Captação de recursos,
+ASSINO - crédito imobiliário,Aquisição,Captação de recursos,
+credimorar,Aquisição,Captação de recursos,
+Mahauz,Aquisição,Captação de recursos,
+EasyCrédito - seu crédito na palma da mão,Aquisição,Captação de recursos,
+Investimento Certo,Aquisição,Captação de recursos,
+Morada dos Sonhos,Aquisição,Captação de recursos,
+Minha Casa Financiada,Aquisição,Captação de recursos,
 avalion - avaliação e captação de imóveis,Aquisição,Valuation de imóveis,
 EEmovel - inteligência imobiliária,Aquisição,Valuation de imóveis,
 Konstit,Aquisição,Valuation de imóveis,
@@ -784,31 +784,31 @@ Morar Sênior,Propriedade em Uso,Senior living,
 gero360,Propriedade em Uso,Senior living,
 portal casas de repouso – facilitando a vida,Propriedade em Uso,Senior living,
 sssenior.com,Propriedade em Uso,Senior living,
-Clinovi - consultórios com serviços,Propriedade em Uso,Compartilhamento de espaços,Consultórios
-clina.care,Propriedade em Uso,Compartilhamento de espaços,Consultórios
-Livance,Propriedade em Uso,Compartilhamento de espaços,Consultórios
-Clinspace,Propriedade em Uso,Compartilhamento de espaços,Consultórios
-wedoctors,Propriedade em Uso,Compartilhamento de espaços,Consultórios
+Clinovi - consultórios com serviços,Propriedade em Uso,Compartilhamento de espaços,
+clina.care,Propriedade em Uso,Compartilhamento de espaços,
+Livance,Propriedade em Uso,Compartilhamento de espaços,
+Clinspace,Propriedade em Uso,Compartilhamento de espaços,
+wedoctors,Propriedade em Uso,Compartilhamento de espaços,
 veromobili,Propriedade em Uso,Decoração,
-movêu,Propriedade em Uso,Decoração,Marketplace
-cômodo.,Propriedade em Uso,Decoração,Marketplace
-Criativando - Home Design,Propriedade em Uso,Decoração,Marketplace
-sofá na caixa,Propriedade em Uso,Decoração,Marketplace
-BOOBAM,Propriedade em Uso,Decoração,Marketplace
-CLUB&CASA DESIGN,Propriedade em Uso,Decoração,Marketplace
-oikko,Propriedade em Uso,Decoração,Marketplace
-arquitetool,Propriedade em Uso,Decoração,Marketplace
-CASA Z,Propriedade em Uso,Decoração,Marketplace
-MeuMobbi,Propriedade em Uso,Decoração,Marketplace
-archy.me,Propriedade em Uso,Decoração,Marketplace
-CASAPRONTA - Design e Interiores,Propriedade em Uso,Decoração,Marketplace
-weplan,Propriedade em Uso,Decoração,Marketplace
-TUIM,Propriedade em Uso,Decoração,Assinatura
-spaceflix,Propriedade em Uso,Decoração,Assinatura
-BEM BACANA,Propriedade em Uso,Decoração,Assinatura
-VIVADecora,Propriedade em Uso,Decoração,Referências Visuais
-Redraw,Propriedade em Uso,Decoração,Referências Visuais
-Star Colors,Propriedade em Uso,Decoração,Referências Visuais
+movêu,Propriedade em Uso,Decoração,
+cômodo.,Propriedade em Uso,Decoração,
+Criativando - Home Design,Propriedade em Uso,Decoração,
+sofá na caixa,Propriedade em Uso,Decoração,
+BOOBAM,Propriedade em Uso,Decoração,
+CLUB&CASA DESIGN,Propriedade em Uso,Decoração,
+oikko,Propriedade em Uso,Decoração,
+arquitetool,Propriedade em Uso,Decoração,
+CASA Z,Propriedade em Uso,Decoração,
+MeuMobbi,Propriedade em Uso,Decoração,
+archy.me,Propriedade em Uso,Decoração,
+CASAPRONTA - Design e Interiores,Propriedade em Uso,Decoração,
+weplan,Propriedade em Uso,Decoração,
+TUIM,Propriedade em Uso,Decoração,
+spaceflix,Propriedade em Uso,Decoração,
+BEM BACANA,Propriedade em Uso,Decoração,
+VIVADecora,Propriedade em Uso,Decoração,
+Redraw,Propriedade em Uso,Decoração,
+Star Colors,Propriedade em Uso,Decoração,
 yogha.,Propriedade em Uso,Gestão de propriedades,
 VILA11,Propriedade em Uso,Gestão de propriedades,
 belong,Propriedade em Uso,Gestão de propriedades,
@@ -821,49 +821,49 @@ VIVER my way,Propriedade em Uso,Gestão de propriedades,
 Test Drive do Imóvel,Propriedade em Uso,Gestão de propriedades,
 eConfor,Propriedade em Uso,Gestão de propriedades,
 bnbguests,Propriedade em Uso,Gestão de propriedades,
-tactu,Propriedade em Uso,Gestão de propriedades,Short Stay
-charlie,Propriedade em Uso,Gestão de propriedades,Short Stay
-seazone,Propriedade em Uso,Gestão de propriedades,Short Stay
-Housi,Propriedade em Uso,Gestão de propriedades,Short Stay
-conviva,Propriedade em Uso,Gestão de propriedades,Short Stay
-wecare,Propriedade em Uso,Gestão de propriedades,Short Stay
-MAHNAI,Propriedade em Uso,Gestão de propriedades,Short Stay
-Super Anfitrião,Propriedade em Uso,Gestão de propriedades,Short Stay
-535homes,Propriedade em Uso,Gestão de propriedades,Short Stay
-anyLife,Propriedade em Uso,Gestão de propriedades,Short Stay
-xtay,Propriedade em Uso,Gestão de propriedades,Short Stay
-LikeHome - Gestão e Hospedagens,Propriedade em Uso,Gestão de propriedades,Short Stay
-OBA APARTMENTS,Propriedade em Uso,Gestão de propriedades,Short Stay
-be my guest,Propriedade em Uso,Gestão de propriedades,Short Stay
-Trevizzo,Propriedade em Uso,Gestão de propriedades,Short Stay
-Anfitriões de Aluguel,Propriedade em Uso,Gestão de propriedades,Short Stay
-welhome,Propriedade em Uso,Gestão de propriedades,Short Stay
-quarto à vista,Propriedade em Uso,Gestão de propriedades,Short Stay
-Carpediem Homes,Propriedade em Uso,Gestão de propriedades,Short Stay
-Comprar&decorar,Propriedade em Uso,Gestão de propriedades,Short Stay
-Omar do Rio,Propriedade em Uso,Gestão de propriedades,Short Stay
-Lobie,Propriedade em Uso,Gestão de propriedades,Short Stay
-360 suites,Propriedade em Uso,Gestão de propriedades,Short Stay
-tripmood,Propriedade em Uso,Gestão de propriedades,Short Stay
-SmartSharing,Propriedade em Uso,Gestão de propriedades,Short Stay
-BemVindo - imóveis por temporada,Propriedade em Uso,Gestão de propriedades,Short Stay
-cyclinn,Propriedade em Uso,Gestão de propriedades,Short Stay
-PINEAPPLES,Propriedade em Uso,Gestão de propriedades,Short Stay
-scaza,Propriedade em Uso,Gestão de propriedades,Plataforma de Gestão
-spacein,Propriedade em Uso,Gestão de propriedades,Plataforma de Gestão
-Tag,Propriedade em Uso,Gestão de propriedades,Plataforma de Gestão
-stays,Propriedade em Uso,Gestão de propriedades,Plataforma de Gestão
-PROGUEST,Propriedade em Uso,Gestão de propriedades,Plataforma de Gestão
-HQBeds,Propriedade em Uso,Gestão de propriedades,Plataforma de Gestão
-paypow,Propriedade em Uso,Gestão de propriedades,Plataforma de Gestão
-ANFITRIÃO PRIME,Propriedade em Uso,Gestão de propriedades,Plataforma de Gestão
-bhomy.com,Propriedade em Uso,Gestão de propriedades,Plataforma de Gestão
-SCOD BRASIL,Propriedade em Uso,Gestão de propriedades,Plataforma de Gestão
-HSystem,Propriedade em Uso,Gestão de propriedades,Plataforma de Gestão
-Quadra Urbana,Propriedade em Uso,Gestão de propriedades,Plataforma de Gestão
-LocX,Propriedade em Uso,Gestão de propriedades,Plataforma de Gestão
-bitz,Propriedade em Uso,Gestão de propriedades,Plataforma de Gestão
-AYRTON,Propriedade em Uso,Gestão de propriedades,Plataforma de Gestão
+tactu,Propriedade em Uso,Gestão de propriedades,
+charlie,Propriedade em Uso,Gestão de propriedades,
+seazone,Propriedade em Uso,Gestão de propriedades,
+Housi,Propriedade em Uso,Gestão de propriedades,
+conviva,Propriedade em Uso,Gestão de propriedades,
+wecare,Propriedade em Uso,Gestão de propriedades,
+MAHNAI,Propriedade em Uso,Gestão de propriedades,
+Super Anfitrião,Propriedade em Uso,Gestão de propriedades,
+535homes,Propriedade em Uso,Gestão de propriedades,
+anyLife,Propriedade em Uso,Gestão de propriedades,
+xtay,Propriedade em Uso,Gestão de propriedades,
+LikeHome - Gestão e Hospedagens,Propriedade em Uso,Gestão de propriedades,
+OBA APARTMENTS,Propriedade em Uso,Gestão de propriedades,
+be my guest,Propriedade em Uso,Gestão de propriedades,
+Trevizzo,Propriedade em Uso,Gestão de propriedades,
+Anfitriões de Aluguel,Propriedade em Uso,Gestão de propriedades,
+welhome,Propriedade em Uso,Gestão de propriedades,
+quarto à vista,Propriedade em Uso,Gestão de propriedades,
+Carpediem Homes,Propriedade em Uso,Gestão de propriedades,
+Comprar&decorar,Propriedade em Uso,Gestão de propriedades,
+Omar do Rio,Propriedade em Uso,Gestão de propriedades,
+Lobie,Propriedade em Uso,Gestão de propriedades,
+360 suites,Propriedade em Uso,Gestão de propriedades,
+tripmood,Propriedade em Uso,Gestão de propriedades,
+SmartSharing,Propriedade em Uso,Gestão de propriedades,
+BemVindo - imóveis por temporada,Propriedade em Uso,Gestão de propriedades,
+cyclinn,Propriedade em Uso,Gestão de propriedades,
+PINEAPPLES,Propriedade em Uso,Gestão de propriedades,
+scaza,Propriedade em Uso,Gestão de propriedades,
+spacein,Propriedade em Uso,Gestão de propriedades,
+Tag,Propriedade em Uso,Gestão de propriedades,
+stays,Propriedade em Uso,Gestão de propriedades,
+PROGUEST,Propriedade em Uso,Gestão de propriedades,
+HQBeds,Propriedade em Uso,Gestão de propriedades,
+paypow,Propriedade em Uso,Gestão de propriedades,
+ANFITRIÃO PRIME,Propriedade em Uso,Gestão de propriedades,
+bhomy.com,Propriedade em Uso,Gestão de propriedades,
+SCOD BRASIL,Propriedade em Uso,Gestão de propriedades,
+HSystem,Propriedade em Uso,Gestão de propriedades,
+Quadra Urbana,Propriedade em Uso,Gestão de propriedades,
+LocX,Propriedade em Uso,Gestão de propriedades,
+bitz,Propriedade em Uso,Gestão de propriedades,
+AYRTON,Propriedade em Uso,Gestão de propriedades,
 skedway,Propriedade em Uso,Workplace analytics,
 neowrk.,Propriedade em Uso,Workplace analytics,
 where,Propriedade em Uso,Workplace analytics,
@@ -878,143 +878,143 @@ BOUTIQUE LAB,Propriedade em Uso,Plataforma de projetos arquitetônicos,
 la decora,Propriedade em Uso,Plataforma de projetos arquitetônicos,
 DECORA CLICK,Propriedade em Uso,Plataforma de projetos arquitetônicos,
 projeto num clique,Propriedade em Uso,Plataforma de projetos arquitetônicos,
-1COMODO,Propriedade em Uso,Reformas,Gestão e Execução de reforma
-truliv,Propriedade em Uso,Reformas,Gestão e Execução de reforma
-lofteria,Propriedade em Uso,Reformas,Gestão e Execução de reforma
-akomod,Propriedade em Uso,Reformas,Gestão e Execução de reforma
-Corbu,Propriedade em Uso,Reformas,Gestão e Execução de reforma
-vobi,Propriedade em Uso,Reformas,Gestão e Execução de reforma
-namecheap,Propriedade em Uso,Reformas,Gestão e Execução de reforma
-spotlar,Propriedade em Uso,Reformas,Gestão e Execução de reforma
-hup,Propriedade em Uso,Reformas,Gestão e Execução de reforma
-CONECTA REFORMA,Propriedade em Uso,Reformas,Gestão e Execução de reforma
-VistoPRED,Propriedade em Uso,Reformas,Gestão e Execução de reforma
-GADUGI Reformas,Propriedade em Uso,Reformas,Gestão e Execução de reforma
-Plin condomínios,Propriedade em Uso,Condomínios,Administradora Digital
-condofy,Propriedade em Uso,Condomínios,Administradora Digital
-4D imobi,Propriedade em Uso,Condomínios,Administradora Digital
-Rede Síndicos,Propriedade em Uso,Condomínios,Prestadores de Serviço
-concessus,Propriedade em Uso,Condomínios,Prestadores de Serviço
-Engelink,Propriedade em Uso,Condomínios,Prestadores de Serviço
-Casa do Síndico,Propriedade em Uso,Condomínios,Prestadores de Serviço
-SUPPLAI,Propriedade em Uso,Condomínios,Prestadores de Serviço
-Presto,Propriedade em Uso,Condomínios,Comodidades
-market4u,Propriedade em Uso,Condomínios,Comodidades
-eletro moove,Propriedade em Uso,Condomínios,Comodidades
-Trela,Propriedade em Uso,Condomínios,Comodidades
-rentbrella,Propriedade em Uso,Condomínios,Comodidades
-2u,Propriedade em Uso,Condomínios,Comodidades
-wali,Propriedade em Uso,Condomínios,Comodidades
-market wow,Propriedade em Uso,Condomínios,Comodidades
-armários inteligentes,Propriedade em Uso,Condomínios,Comodidades
-TECNORISE,Propriedade em Uso,Condomínios,Gestão e Comunicação
-ConectCon,Propriedade em Uso,Condomínios,Gestão e Comunicação
-OnMesh,Propriedade em Uso,Condomínios,Gestão e Comunicação
-Conviver - App de condomínios,Propriedade em Uso,Condomínios,Gestão e Comunicação
-communy,Propriedade em Uso,Condomínios,Gestão e Comunicação
-apepê,Propriedade em Uso,Condomínios,Gestão e Comunicação
-almah,Propriedade em Uso,Condomínios,Gestão e Comunicação
-Ohtel - condomínios inteligentes,Propriedade em Uso,Condomínios,Gestão e Comunicação
-Smarttcon - condomínios inteligentes,Propriedade em Uso,Condomínios,Gestão e Comunicação
-Síndico Online - Gestão Condominial,Propriedade em Uso,Condomínios,Gestão e Comunicação
-organize meu condomínio,Propriedade em Uso,Condomínios,Gestão e Comunicação
-mycond,Propriedade em Uso,Condomínios,Gestão e Comunicação
-Condox,Propriedade em Uso,Condomínios,Gestão e Comunicação
-condomob,Propriedade em Uso,Condomínios,Gestão e Comunicação
-Realiza (Realiza TI),Propriedade em Uso,Condomínios,Gestão e Comunicação
-myvillage,Propriedade em Uso,Condomínios,Gestão e Comunicação
-CONDOBOX,Propriedade em Uso,Condomínios,Gestão e Comunicação
-uCondo,Propriedade em Uso,Condomínios,Gestão e Comunicação
-ByDoor,Propriedade em Uso,Condomínios,Gestão e Comunicação
-Moviva (Cosimo),Propriedade em Uso,Condomínios,Gestão e Comunicação
-CONDSIS,Propriedade em Uso,Condomínios,Gestão e Comunicação
-APPTOHOME,Propriedade em Uso,Condomínios,Gestão e Comunicação
-CONDLINK,Propriedade em Uso,Condomínios,Gestão e Comunicação
-LIVROata,Propriedade em Uso,Condomínios,Gestão e Comunicação
-Seu condomínio,Propriedade em Uso,Condomínios,Gestão e Comunicação
-ap.controle,Propriedade em Uso,Condomínios,Gestão e Comunicação
-homebook - smart portaria,Propriedade em Uso,Condomínios,Gestão e Comunicação
-severino app,Propriedade em Uso,Condomínios,Gestão e Comunicação
-acolweb,Propriedade em Uso,Condomínios,Gestão e Comunicação
-ETHOS VIVET,Propriedade em Uso,Condomínios,Gestão e Comunicação
-winker,Propriedade em Uso,Condomínios,Gestão e Comunicação
-SmartSíndico,Propriedade em Uso,Condomínios,Gestão e Comunicação
-Condomínio App,Propriedade em Uso,Condomínios,Gestão e Comunicação
-be all bee,Propriedade em Uso,Condomínios,Gestão e Comunicação
-Livo,Propriedade em Uso,Condomínios,Gestão e Comunicação
-DoctorCondo,Propriedade em Uso,Condomínios,Gestão e Comunicação
-Nok Nox,Propriedade em Uso,Condomínios,Gestão e Comunicação
-greenclub,Propriedade em Uso,Condomínios,Sustentabilidade
-Minha Coleta,Propriedade em Uso,Condomínios,Sustentabilidade
-WasteBank,Propriedade em Uso,Condomínios,Sustentabilidade
-valora,Propriedade em Uso,Condomínios,Sustentabilidade
-Ciclefy,Propriedade em Uso,Condomínios,Sustentabilidade
-VERDEACQUA,Propriedade em Uso,Condomínios,Sustentabilidade
-trashin,Propriedade em Uso,Condomínios,Sustentabilidade
-SOLOS,Propriedade em Uso,Condomínios,Sustentabilidade
-Green Mining,Propriedade em Uso,Condomínios,Sustentabilidade
-Você Recicla,Propriedade em Uso,Condomínios,Sustentabilidade
-Eco Circuito,Propriedade em Uso,Condomínios,Sustentabilidade
-NUTRICAR,Propriedade em Uso,Condomínios,Minimercado
-Onii,Propriedade em Uso,Condomínios,Minimercado
-vendify,Propriedade em Uso,Condomínios,Minimercado
-snackin',Propriedade em Uso,Condomínios,Minimercado
-SMARTBREAK,Propriedade em Uso,Condomínios,Minimercado
-peggô market,Propriedade em Uso,Condomínios,Minimercado
-easy market - honest culture,Propriedade em Uso,Condomínios,Minimercado
-vendPerto - mini market,Propriedade em Uso,Condomínios,Minimercado
-InHouse market,Propriedade em Uso,Condomínios,Minimercado
-BE HONEST,Propriedade em Uso,Condomínios,Minimercado
-Minha Quitandinha,Propriedade em Uso,Condomínios,Minimercado
-fast4you,Propriedade em Uso,Condomínios,Minimercado
-Malu Market,Propriedade em Uso,Condomínios,Minimercado
-CONDOSTORE,Propriedade em Uso,Condomínios,Minimercado
-Honest Market,Propriedade em Uso,Condomínios,Minimercado
-Seletto in,Propriedade em Uso,Condomínios,Minimercado
-condopay,Propriedade em Uso,Condomínios,Produtos Financeiros
-CONDOCONTA,Propriedade em Uso,Condomínios,Produtos Financeiros
-AZURITTA,Propriedade em Uso,Condomínios,Produtos Financeiros
-CONDOBEM,Propriedade em Uso,Condomínios,Produtos Financeiros
-CondoCash,Propriedade em Uso,Condomínios,Produtos Financeiros
-CondoBlue,Propriedade em Uso,Condomínios,Produtos Financeiros
-6P BANK,Propriedade em Uso,Condomínios,Produtos Financeiros
-CondCred,Propriedade em Uso,Condomínios,Produtos Financeiros
-HR Digital,Propriedade em Uso,Condomínios,Produtos Financeiros
-wohpag,Propriedade em Uso,Condomínios,Produtos Financeiros
-CondoMoney,Propriedade em Uso,Condomínios,Produtos Financeiros
-Condolivre,Propriedade em Uso,Condomínios,Produtos Financeiros
-DEDUZ,Propriedade em Uso,Condomínios,Produtos Financeiros
-ESTAIADA,Propriedade em Uso,Condomínios,Produtos Financeiros
-atende portaria,Propriedade em Uso,Condomínios,Segurança
-monuv,Propriedade em Uso,Condomínios,Segurança
-DRIKEY,Propriedade em Uso,Condomínios,Segurança
-w3lcome,Propriedade em Uso,Condomínios,Segurança
-Camerite,Propriedade em Uso,Condomínios,Segurança
-Gabriel,Propriedade em Uso,Condomínios,Segurança
-smartvisit,Propriedade em Uso,Condomínios,Segurança
-accessrun,Propriedade em Uso,Condomínios,Segurança
-EasyFront,Propriedade em Uso,Condomínios,Segurança
-queromorar,Propriedade em Uso,Condomínios,Segurança
-condfy,Propriedade em Uso,Condomínios,Segurança
-findme,Propriedade em Uso,Condomínios,Segurança
-HAILA,Propriedade em Uso,Condomínios,Segurança
-pxTalk,Propriedade em Uso,Condomínios,Segurança
-Letmein,Propriedade em Uso,Condomínios,Segurança
-CONSIS,Propriedade em Uso,Condomínios,Segurança
-ebrigada - prevenção de sinistros,Propriedade em Uso,Condomínios,Segurança
-beNuvem,Propriedade em Uso,Condomínios,Segurança
-cosecurity,Propriedade em Uso,Condomínios,Segurança
-eCondos,Propriedade em Uso,Condomínios,Segurança
-Linha Direta,Propriedade em Uso,Condomínios,Segurança
-REMOTY,Propriedade em Uso,Condomínios,Segurança
-SHIELDER,Propriedade em Uso,Condomínios,Segurança
-atendeai,Propriedade em Uso,Condomínios,Segurança
-Quasar Tech,Propriedade em Uso,Condomínios,Segurança
-LogShare,Propriedade em Uso,Logística,Fretamento
-goFlux,Propriedade em Uso,Logística,Fretamento
-tag2u,Propriedade em Uso,Logística,Fretamento
-MUDZ,Propriedade em Uso,Logística,Fretamento
-NEZTI,Propriedade em Uso,Logística,Fretamento
+1COMODO,Propriedade em Uso,Reformas,
+truliv,Propriedade em Uso,Reformas,
+lofteria,Propriedade em Uso,Reformas,
+akomod,Propriedade em Uso,Reformas,
+Corbu,Propriedade em Uso,Reformas,
+vobi,Propriedade em Uso,Reformas,
+namecheap,Propriedade em Uso,Reformas,
+spotlar,Propriedade em Uso,Reformas,
+hup,Propriedade em Uso,Reformas,
+CONECTA REFORMA,Propriedade em Uso,Reformas,
+VistoPRED,Propriedade em Uso,Reformas,
+GADUGI Reformas,Propriedade em Uso,Reformas,
+Plin condomínios,Propriedade em Uso,Condomínios,
+condofy,Propriedade em Uso,Condomínios,
+4D imobi,Propriedade em Uso,Condomínios,
+Rede Síndicos,Propriedade em Uso,Condomínios,
+concessus,Propriedade em Uso,Condomínios,
+Engelink,Propriedade em Uso,Condomínios,
+Casa do Síndico,Propriedade em Uso,Condomínios,
+SUPPLAI,Propriedade em Uso,Condomínios,
+Presto,Propriedade em Uso,Condomínios,
+market4u,Propriedade em Uso,Condomínios,
+eletro moove,Propriedade em Uso,Condomínios,
+Trela,Propriedade em Uso,Condomínios,
+rentbrella,Propriedade em Uso,Condomínios,
+2u,Propriedade em Uso,Condomínios,
+wali,Propriedade em Uso,Condomínios,
+market wow,Propriedade em Uso,Condomínios,
+armários inteligentes,Propriedade em Uso,Condomínios,
+TECNORISE,Propriedade em Uso,Condomínios,
+ConectCon,Propriedade em Uso,Condomínios,
+OnMesh,Propriedade em Uso,Condomínios,
+Conviver - App de condomínios,Propriedade em Uso,Condomínios,
+communy,Propriedade em Uso,Condomínios,
+apepê,Propriedade em Uso,Condomínios,
+almah,Propriedade em Uso,Condomínios,
+Ohtel - condomínios inteligentes,Propriedade em Uso,Condomínios,
+Smarttcon - condomínios inteligentes,Propriedade em Uso,Condomínios,
+Síndico Online - Gestão Condominial,Propriedade em Uso,Condomínios,
+organize meu condomínio,Propriedade em Uso,Condomínios,
+mycond,Propriedade em Uso,Condomínios,
+Condox,Propriedade em Uso,Condomínios,
+condomob,Propriedade em Uso,Condomínios,
+Realiza (Realiza TI),Propriedade em Uso,Condomínios,
+myvillage,Propriedade em Uso,Condomínios,
+CONDOBOX,Propriedade em Uso,Condomínios,
+uCondo,Propriedade em Uso,Condomínios,
+ByDoor,Propriedade em Uso,Condomínios,
+Moviva (Cosimo),Propriedade em Uso,Condomínios,
+CONDSIS,Propriedade em Uso,Condomínios,
+APPTOHOME,Propriedade em Uso,Condomínios,
+CONDLINK,Propriedade em Uso,Condomínios,
+LIVROata,Propriedade em Uso,Condomínios,
+Seu condomínio,Propriedade em Uso,Condomínios,
+ap.controle,Propriedade em Uso,Condomínios,
+homebook - smart portaria,Propriedade em Uso,Condomínios,
+severino app,Propriedade em Uso,Condomínios,
+acolweb,Propriedade em Uso,Condomínios,
+ETHOS VIVET,Propriedade em Uso,Condomínios,
+winker,Propriedade em Uso,Condomínios,
+SmartSíndico,Propriedade em Uso,Condomínios,
+Condomínio App,Propriedade em Uso,Condomínios,
+be all bee,Propriedade em Uso,Condomínios,
+Livo,Propriedade em Uso,Condomínios,
+DoctorCondo,Propriedade em Uso,Condomínios,
+Nok Nox,Propriedade em Uso,Condomínios,
+greenclub,Propriedade em Uso,Condomínios,
+Minha Coleta,Propriedade em Uso,Condomínios,
+WasteBank,Propriedade em Uso,Condomínios,
+valora,Propriedade em Uso,Condomínios,
+Ciclefy,Propriedade em Uso,Condomínios,
+VERDEACQUA,Propriedade em Uso,Condomínios,
+trashin,Propriedade em Uso,Condomínios,
+SOLOS,Propriedade em Uso,Condomínios,
+Green Mining,Propriedade em Uso,Condomínios,
+Você Recicla,Propriedade em Uso,Condomínios,
+Eco Circuito,Propriedade em Uso,Condomínios,
+NUTRICAR,Propriedade em Uso,Condomínios,
+Onii,Propriedade em Uso,Condomínios,
+vendify,Propriedade em Uso,Condomínios,
+snackin',Propriedade em Uso,Condomínios,
+SMARTBREAK,Propriedade em Uso,Condomínios,
+peggô market,Propriedade em Uso,Condomínios,
+easy market - honest culture,Propriedade em Uso,Condomínios,
+vendPerto - mini market,Propriedade em Uso,Condomínios,
+InHouse market,Propriedade em Uso,Condomínios,
+BE HONEST,Propriedade em Uso,Condomínios,
+Minha Quitandinha,Propriedade em Uso,Condomínios,
+fast4you,Propriedade em Uso,Condomínios,
+Malu Market,Propriedade em Uso,Condomínios,
+CONDOSTORE,Propriedade em Uso,Condomínios,
+Honest Market,Propriedade em Uso,Condomínios,
+Seletto in,Propriedade em Uso,Condomínios,
+condopay,Propriedade em Uso,Condomínios,
+CONDOCONTA,Propriedade em Uso,Condomínios,
+AZURITTA,Propriedade em Uso,Condomínios,
+CONDOBEM,Propriedade em Uso,Condomínios,
+CondoCash,Propriedade em Uso,Condomínios,
+CondoBlue,Propriedade em Uso,Condomínios,
+6P BANK,Propriedade em Uso,Condomínios,
+CondCred,Propriedade em Uso,Condomínios,
+HR Digital,Propriedade em Uso,Condomínios,
+wohpag,Propriedade em Uso,Condomínios,
+CondoMoney,Propriedade em Uso,Condomínios,
+Condolivre,Propriedade em Uso,Condomínios,
+DEDUZ,Propriedade em Uso,Condomínios,
+ESTAIADA,Propriedade em Uso,Condomínios,
+atende portaria,Propriedade em Uso,Condomínios,
+monuv,Propriedade em Uso,Condomínios,
+DRIKEY,Propriedade em Uso,Condomínios,
+w3lcome,Propriedade em Uso,Condomínios,
+Camerite,Propriedade em Uso,Condomínios,
+Gabriel,Propriedade em Uso,Condomínios,
+smartvisit,Propriedade em Uso,Condomínios,
+accessrun,Propriedade em Uso,Condomínios,
+EasyFront,Propriedade em Uso,Condomínios,
+queromorar,Propriedade em Uso,Condomínios,
+condfy,Propriedade em Uso,Condomínios,
+findme,Propriedade em Uso,Condomínios,
+HAILA,Propriedade em Uso,Condomínios,
+pxTalk,Propriedade em Uso,Condomínios,
+Letmein,Propriedade em Uso,Condomínios,
+CONSIS,Propriedade em Uso,Condomínios,
+ebrigada - prevenção de sinistros,Propriedade em Uso,Condomínios,
+beNuvem,Propriedade em Uso,Condomínios,
+cosecurity,Propriedade em Uso,Condomínios,
+eCondos,Propriedade em Uso,Condomínios,
+Linha Direta,Propriedade em Uso,Condomínios,
+REMOTY,Propriedade em Uso,Condomínios,
+SHIELDER,Propriedade em Uso,Condomínios,
+atendeai,Propriedade em Uso,Condomínios,
+Quasar Tech,Propriedade em Uso,Condomínios,
+LogShare,Propriedade em Uso,Logística,
+goFlux,Propriedade em Uso,Logística,
+tag2u,Propriedade em Uso,Logística,
+MUDZ,Propriedade em Uso,Logística,
+NEZTI,Propriedade em Uso,Logística,
 magikey,Propriedade em Uso,Smart building,
 podesubir,Propriedade em Uso,Smart building,
 Loomy,Propriedade em Uso,Smart building,
@@ -1022,50 +1022,50 @@ SiiSmart,Propriedade em Uso,Smart building,
 SQUAIR,Propriedade em Uso,Smart building,
 nway pro,Propriedade em Uso,Smart building,
 TRINITYSIS,Propriedade em Uso,Smart building,
-MANU HELP,Propriedade em Uso,Facilities,Gestão e Manutenção
-Manu 2b,Propriedade em Uso,Facilities,Gestão e Manutenção
-Leankeep,Propriedade em Uso,Facilities,Gestão e Manutenção
-trackfy,Propriedade em Uso,Facilities,Gestão e Manutenção
-TRACTIAN,Propriedade em Uso,Facilities,Gestão e Manutenção
-Metam,Propriedade em Uso,Facilities,Gestão e Manutenção
-SAFEB,Propriedade em Uso,Facilities,Gestão e Manutenção
-Produttivo,Propriedade em Uso,Facilities,Gestão e Manutenção
-Melvin,Propriedade em Uso,Facilities,Gestão e Manutenção
-7Dtech - imobcare,Propriedade em Uso,Facilities,Gestão e Manutenção
-trílogo,Propriedade em Uso,Facilities,Gestão e Manutenção
-Éleme,Propriedade em Uso,Facilities,Gestão e Manutenção
-DronePower,Propriedade em Uso,Facilities,Gestão e Manutenção
-Allexo - tecnologia,Propriedade em Uso,Facilities,Gestão Energética
-FOHAT,Propriedade em Uso,Facilities,Gestão Energética
-MethaEnergia,Propriedade em Uso,Facilities,Gestão Energética
-beenergy,Propriedade em Uso,Facilities,Gestão Energética
-SolarView,Propriedade em Uso,Facilities,Gestão Energética
-IGOAL - tecnologia,Propriedade em Uso,Facilities,Gestão Energética
-TRADENERGY,Propriedade em Uso,Facilities,Gestão Energética
-DISPOR Energia,Propriedade em Uso,Facilities,Gestão Energética
-POLUS,Propriedade em Uso,Facilities,Gestão Energética
-Delfos,Propriedade em Uso,Facilities,Gestão Energética
-Bow-e,Propriedade em Uso,Facilities,Gestão Energética
-tyr,Propriedade em Uso,Facilities,Gestão Energética
-clarke energia,Propriedade em Uso,Facilities,Gestão Energética
-Ativa energia,Propriedade em Uso,Facilities,Gestão Energética
-enercycle,Propriedade em Uso,Facilities,Gestão Energética
-CUBI energia,Propriedade em Uso,Facilities,Gestão Energética
-Energia das Coisas,Propriedade em Uso,Facilities,Gestão Energética
-NEX Energy,Propriedade em Uso,Facilities,Gestão Energética
-eficienergy,Propriedade em Uso,Facilities,Gestão Energética
-medeage,Propriedade em Uso,Facilities,Gestão Energética
-MONDI ENERGY,Propriedade em Uso,Facilities,Gestão Energética
-Enerzee,Propriedade em Uso,Facilities,Gestão Energética
-T&D Sustentável,Propriedade em Uso,Facilities,Gestão Hídrica
-piipee,Propriedade em Uso,Facilities,Gestão Hídrica
-stattus4,Propriedade em Uso,Facilities,Gestão Hídrica
-BLUETECH Liquid,Propriedade em Uso,Facilities,Gestão Hídrica
-sagatech,Propriedade em Uso,Facilities,Gestão Hídrica
-acqua logic,Propriedade em Uso,Facilities,Gestão Hídrica
-HIDROMETRIC,Propriedade em Uso,Facilities,Gestão Hídrica
-neowater - eficiência hídrica,Propriedade em Uso,Facilities,Gestão Hídrica
-PLUVI - soluções ambientais inteligentes,Propriedade em Uso,Facilities,Gestão Hídrica
+MANU HELP,Propriedade em Uso,Facilities,
+Manu 2b,Propriedade em Uso,Facilities,
+Leankeep,Propriedade em Uso,Facilities,
+trackfy,Propriedade em Uso,Facilities,
+TRACTIAN,Propriedade em Uso,Facilities,
+Metam,Propriedade em Uso,Facilities,
+SAFEB,Propriedade em Uso,Facilities,
+Produttivo,Propriedade em Uso,Facilities,
+Melvin,Propriedade em Uso,Facilities,
+7Dtech - imobcare,Propriedade em Uso,Facilities,
+trílogo,Propriedade em Uso,Facilities,
+Éleme,Propriedade em Uso,Facilities,
+DronePower,Propriedade em Uso,Facilities,
+Allexo - tecnologia,Propriedade em Uso,Facilities,
+FOHAT,Propriedade em Uso,Facilities,
+MethaEnergia,Propriedade em Uso,Facilities,
+beenergy,Propriedade em Uso,Facilities,
+SolarView,Propriedade em Uso,Facilities,
+IGOAL - tecnologia,Propriedade em Uso,Facilities,
+TRADENERGY,Propriedade em Uso,Facilities,
+DISPOR Energia,Propriedade em Uso,Facilities,
+POLUS,Propriedade em Uso,Facilities,
+Delfos,Propriedade em Uso,Facilities,
+Bow-e,Propriedade em Uso,Facilities,
+tyr,Propriedade em Uso,Facilities,
+clarke energia,Propriedade em Uso,Facilities,
+Ativa energia,Propriedade em Uso,Facilities,
+enercycle,Propriedade em Uso,Facilities,
+CUBI energia,Propriedade em Uso,Facilities,
+Energia das Coisas,Propriedade em Uso,Facilities,
+NEX Energy,Propriedade em Uso,Facilities,
+eficienergy,Propriedade em Uso,Facilities,
+medeage,Propriedade em Uso,Facilities,
+MONDI ENERGY,Propriedade em Uso,Facilities,
+Enerzee,Propriedade em Uso,Facilities,
+T&D Sustentável,Propriedade em Uso,Facilities,
+piipee,Propriedade em Uso,Facilities,
+stattus4,Propriedade em Uso,Facilities,
+BLUETECH Liquid,Propriedade em Uso,Facilities,
+sagatech,Propriedade em Uso,Facilities,
+acqua logic,Propriedade em Uso,Facilities,
+HIDROMETRIC,Propriedade em Uso,Facilities,
+neowater - eficiência hídrica,Propriedade em Uso,Facilities,
+PLUVI - soluções ambientais inteligentes,Propriedade em Uso,Facilities,
 LoopKey,Propriedade em Uso,Smart home,
 bluelux,Propriedade em Uso,Smart home,
 dyonaOS,Propriedade em Uso,Smart home,
@@ -1078,53 +1078,53 @@ kokar,Propriedade em Uso,Smart home,
 hub,Propriedade em Uso,Smart home,
 HAUSENN+,Propriedade em Uso,Smart home,
 houseasy,Propriedade em Uso,Smart home,
-VOXEPOWER,Propriedade em Uso,Utilities,Carregamento de EVs
-NeoCharge,Propriedade em Uso,Utilities,Carregamento de EVs
-yellotmob,Propriedade em Uso,Utilities,Carregamento de EVs
-wecharge,Propriedade em Uso,Utilities,Carregamento de EVs
-tupi,Propriedade em Uso,Utilities,Carregamento de EVs
-movE,Propriedade em Uso,Utilities,Carregamento de EVs
-greenv,Propriedade em Uso,Utilities,Carregamento de EVs
-POWER2GO,Propriedade em Uso,Utilities,Carregamento de EVs
-ZuuZ - Mobilidade Elétrica,Propriedade em Uso,Utilities,Carregamento de EVs
-Zletric,Propriedade em Uso,Utilities,Carregamento de EVs
-Eletricus,Propriedade em Uso,Utilities,Carregamento de EVs
-INCHARGE,Propriedade em Uso,Utilities,Carregamento de EVs
-ELEVENTEC,Propriedade em Uso,Utilities,Carregamento de EVs
-EZVolt,Propriedade em Uso,Utilities,Carregamento de EVs
-VoltBras,Propriedade em Uso,Utilities,Carregamento de EVs
-minum,Propriedade em Uso,Utilities,Energia por Assinatura
-flora,Propriedade em Uso,Utilities,Energia por Assinatura
-solar21,Propriedade em Uso,Utilities,Energia por Assinatura
-reverde,Propriedade em Uso,Utilities,Energia por Assinatura
-yellot,Propriedade em Uso,Utilities,Energia por Assinatura
-NewSun,Propriedade em Uso,Utilities,Energia por Assinatura
-Ecosol - condomínio solar,Propriedade em Uso,Utilities,Energia por Assinatura
-CleanClic,Propriedade em Uso,Utilities,Energia por Assinatura
-MAYA ENERGY,Propriedade em Uso,Utilities,Energia por Assinatura
-sunnyhub,Propriedade em Uso,Utilities,Energia por Assinatura
-EGRONN,Propriedade em Uso,Utilities,Energia por Assinatura
-Electy,Propriedade em Uso,Utilities,Energia por Assinatura
-SUNRENT,Propriedade em Uso,Utilities,Energia por Assinatura
-sunne,Propriedade em Uso,Utilities,Energia por Assinatura
-SOLSTAR,Propriedade em Uso,Utilities,Energia Solar
-GENYX,Propriedade em Uso,Utilities,Energia Solar
-Fin.Yellow,Propriedade em Uso,Utilities,Energia Solar
-holu,Propriedade em Uso,Utilities,Energia Solar
-SUN MOBI,Propriedade em Uso,Utilities,Energia Solar
-Lemon,Propriedade em Uso,Utilities,Energia Solar
-alba - energia solar,Propriedade em Uso,Utilities,Energia Solar
-edsun,Propriedade em Uso,Utilities,Energia Solar
-Cartão Solar,Propriedade em Uso,Utilities,Energia Solar
-JUNTOS - energia compartilhada,Propriedade em Uso,Utilities,Energia Solar
-Gynga,Propriedade em Uso,Utilities,Energia Solar
-grupo eneergia,Propriedade em Uso,Utilities,Energia Solar
-sunlabs,Propriedade em Uso,Utilities,Energia Solar
-meu financiamento solar,Propriedade em Uso,Utilities,Energia Solar
-conexão solar,Propriedade em Uso,Utilities,Energia Solar
-Renova Green,Propriedade em Uso,Utilities,Energia Solar
-First Energy,Propriedade em Uso,Utilities,Energia Solar
-ENERGY Review,Propriedade em Uso,Utilities,Energia Solar
+VOXEPOWER,Propriedade em Uso,Utilities,
+NeoCharge,Propriedade em Uso,Utilities,
+yellotmob,Propriedade em Uso,Utilities,
+wecharge,Propriedade em Uso,Utilities,
+tupi,Propriedade em Uso,Utilities,
+movE,Propriedade em Uso,Utilities,
+greenv,Propriedade em Uso,Utilities,
+POWER2GO,Propriedade em Uso,Utilities,
+ZuuZ - Mobilidade Elétrica,Propriedade em Uso,Utilities,
+Zletric,Propriedade em Uso,Utilities,
+Eletricus,Propriedade em Uso,Utilities,
+INCHARGE,Propriedade em Uso,Utilities,
+ELEVENTEC,Propriedade em Uso,Utilities,
+EZVolt,Propriedade em Uso,Utilities,
+VoltBras,Propriedade em Uso,Utilities,
+minum,Propriedade em Uso,Utilities,
+flora,Propriedade em Uso,Utilities,
+solar21,Propriedade em Uso,Utilities,
+reverde,Propriedade em Uso,Utilities,
+yellot,Propriedade em Uso,Utilities,
+NewSun,Propriedade em Uso,Utilities,
+Ecosol - condomínio solar,Propriedade em Uso,Utilities,
+CleanClic,Propriedade em Uso,Utilities,
+MAYA ENERGY,Propriedade em Uso,Utilities,
+sunnyhub,Propriedade em Uso,Utilities,
+EGRONN,Propriedade em Uso,Utilities,
+Electy,Propriedade em Uso,Utilities,
+SUNRENT,Propriedade em Uso,Utilities,
+sunne,Propriedade em Uso,Utilities,
+SOLSTAR,Propriedade em Uso,Utilities,
+GENYX,Propriedade em Uso,Utilities,
+Fin.Yellow,Propriedade em Uso,Utilities,
+holu,Propriedade em Uso,Utilities,
+SUN MOBI,Propriedade em Uso,Utilities,
+Lemon,Propriedade em Uso,Utilities,
+alba - energia solar,Propriedade em Uso,Utilities,
+edsun,Propriedade em Uso,Utilities,
+Cartão Solar,Propriedade em Uso,Utilities,
+JUNTOS - energia compartilhada,Propriedade em Uso,Utilities,
+Gynga,Propriedade em Uso,Utilities,
+grupo eneergia,Propriedade em Uso,Utilities,
+sunlabs,Propriedade em Uso,Utilities,
+meu financiamento solar,Propriedade em Uso,Utilities,
+conexão solar,Propriedade em Uso,Utilities,
+Renova Green,Propriedade em Uso,Utilities,
+First Energy,Propriedade em Uso,Utilities,
+ENERGY Review,Propriedade em Uso,Utilities,
 KitchenCentral,Propriedade em Uso,Outros,
 Preservaland,Propriedade em Uso,Outros,
 appito,Propriedade em Uso,Outros,
