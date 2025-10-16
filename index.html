@@ -312,7 +312,7 @@
         let link, node, label;
 
         // Load and process CSV data
-        d3.csv("mapa_construtechs_proptechs - Página1.csv").then(data => {
+        d3.csv("dados/mapa_construtechs_proptechs - Página1.csv").then(data => {
             console.log("CSV loaded successfully:", data.length, "rows");
             console.log("First row sample:", data[0]);
             processData(data);
