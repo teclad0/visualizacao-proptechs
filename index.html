@@ -455,7 +455,7 @@
         let simulationMapa;
         let linkMapa, nodeMapa, labelMapa;
 
-        d3.csv("dados/mapa_construtechs_proptechs - Página1.csv").then(data => {
+        d3.csv("https://raw.githubusercontent.com/teclad0/visualizacao-proptechs/refs/heads/main/dados/mapa_construtechs_proptechs%20-%20P%C3%A1gina1.csv").then(data => {
             console.log("Mapa CSV loaded successfully:", data.length, "rows");
             processDataMapa(data);
             createVisualizationMapa();
@@ -849,7 +849,7 @@
         let simulationClassificacao;
         let linkClassificacao, nodeClassificacao, labelClassificacao;
 
-        d3.csv("dados/classificacao_proptechs_matriz.csv").then(data => {
+        d3.csv("https://raw.githubusercontent.com/teclad0/visualizacao-proptechs/refs/heads/main/dados/classificacao_proptechs_matriz.csv").then(data => {
             console.log("Classificacao CSV loaded successfully:", data.length, "rows");
             processDataClassificacao(data);
             createVisualizationClassificacao();
