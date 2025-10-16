@@ -325,9 +325,16 @@
                 </div>
                 
                 <div class="control-group">
-                    <label>Filter by Category:</label>
+                    <label>Filter by Categoria Principal:</label>
                     <select id="categoryFilter-mapa">
                         <option value="all">All Categories</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label>Filter by Subcategoria:</label>
+                    <select id="subcategoryFilter-mapa">
+                        <option value="all">All Subcategories</option>
                     </select>
                 </div>
                 
@@ -683,10 +690,16 @@
 
         function createLegendMapa() {
             const categories = Array.from(new Set(nodesMapa.filter(n => n.type === 'company').map(n => n.category))).sort();
+            const subcategories = Array.from(new Set(nodesMapa.filter(n => n.type === 'company' && n.subcategory).map(n => n.subcategory))).sort();
             
             const categorySelect = d3.select("#categoryFilter-mapa");
             categories.forEach(cat => {
                 categorySelect.append("option").attr("value", cat).text(cat);
+            });
+
+            const subcategorySelect = d3.select("#subcategoryFilter-mapa");
+            subcategories.forEach(subcat => {
+                subcategorySelect.append("option").attr("value", subcat).text(subcat);
             });
 
             const legendContent = d3.select("#legendContent-mapa");
@@ -700,7 +713,7 @@
                 
                 item.on("click", () => {
                     categorySelect.property("value", cat);
-                    filterByCategoryMapa(cat);
+                    applyFiltersMapa();
                 });
             });
         }
@@ -724,7 +737,11 @@
             });
 
             d3.select("#categoryFilter-mapa").on("change", function() {
-                filterByCategoryMapa(this.value);
+                applyFiltersMapa();
+            });
+
+            d3.select("#subcategoryFilter-mapa").on("change", function() {
+                applyFiltersMapa();
             });
 
             d3.select("#resetZoom-mapa").on("click", () => {
@@ -739,34 +756,69 @@
             });
         }
 
-        function filterByCategoryMapa(category) {
-            if (category === "all") {
+        function applyFiltersMapa() {
+            const selectedCategory = d3.select("#categoryFilter-mapa").property("value");
+            const selectedSubcategory = d3.select("#subcategoryFilter-mapa").property("value");
+
+            if (selectedCategory === "all" && selectedSubcategory === "all") {
+                // Show all nodes and links
                 nodeMapa.attr("opacity", d => d.type === 'company' ? 0.8 : 1);
                 linkMapa.attr("stroke-opacity", 0.3);
                 labelMapa.attr("opacity", 1);
             } else {
+                // Apply combined filtering
                 nodeMapa.attr("opacity", d => {
                     if (d.type === 'company') {
-                        return d.category === category ? 0.8 : 0.1;
+                        let matchesCategory = selectedCategory === "all" || d.category === selectedCategory;
+                        let matchesSubcategory = selectedSubcategory === "all" || d.subcategory === selectedSubcategory;
+                        
+                        // Show company only if it matches both criteria
+                        return (matchesCategory && matchesSubcategory) ? 0.8 : 0.1;
                     }
-                    const isRelated = linksMapa.some(l => 
-                        (l.source.id === d.id || l.target.id === d.id) && 
-                        ((l.source.category === category) || (l.target.category === category))
-                    );
+                    
+                    // For category and subcategory nodes, check if they're related to matching companies
+                    const isRelated = linksMapa.some(l => {
+                        if (l.source.id === d.id || l.target.id === d.id) {
+                            const company = l.source.type === 'company' ? l.source : l.target;
+                            if (company.type === 'company') {
+                                let matchesCategory = selectedCategory === "all" || company.category === selectedCategory;
+                                let matchesSubcategory = selectedSubcategory === "all" || company.subcategory === selectedSubcategory;
+                                return matchesCategory && matchesSubcategory;
+                            }
+                        }
+                        return false;
+                    });
                     return isRelated ? 1 : 0.1;
                 });
 
                 linkMapa.attr("stroke-opacity", d => {
-                    const sourceMatch = d.source.type === 'company' && d.source.category === category;
-                    const targetMatch = d.target.type === 'company' && d.target.category === category;
-                    return (sourceMatch || targetMatch) ? 0.3 : 0.05;
+                    const company = d.source.type === 'company' ? d.source : d.target;
+                    if (company.type === 'company') {
+                        let matchesCategory = selectedCategory === "all" || company.category === selectedCategory;
+                        let matchesSubcategory = selectedSubcategory === "all" || company.subcategory === selectedSubcategory;
+                        return (matchesCategory && matchesSubcategory) ? 0.3 : 0.05;
+                    }
+                    return 0.05;
                 });
 
                 labelMapa.attr("opacity", d => {
-                    const isRelated = linksMapa.some(l => 
-                        (l.source.id === d.id || l.target.id === d.id) && 
-                        ((l.source.category === category) || (l.target.category === category))
-                    );
+                    if (d.type === 'company') {
+                        let matchesCategory = selectedCategory === "all" || d.category === selectedCategory;
+                        let matchesSubcategory = selectedSubcategory === "all" || d.subcategory === selectedSubcategory;
+                        return (matchesCategory && matchesSubcategory) ? 1 : 0.1;
+                    }
+                    
+                    const isRelated = linksMapa.some(l => {
+                        if (l.source.id === d.id || l.target.id === d.id) {
+                            const company = l.source.type === 'company' ? l.source : l.target;
+                            if (company.type === 'company') {
+                                let matchesCategory = selectedCategory === "all" || company.category === selectedCategory;
+                                let matchesSubcategory = selectedSubcategory === "all" || company.subcategory === selectedSubcategory;
+                                return matchesCategory && matchesSubcategory;
+                            }
+                        }
+                        return false;
+                    });
                     return isRelated ? 1 : 0.1;
                 });
             }
